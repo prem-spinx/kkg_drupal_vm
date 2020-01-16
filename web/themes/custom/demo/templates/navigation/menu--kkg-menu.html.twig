@@ -30,23 +30,26 @@
   {% import _self as menus %}
   {% if items %}
     {% if menu_level == 0 %}
-      <ul class="clearfix-menu" id="headerNav" style="width:685.53px; height:51px;">
+      <ul{{ attributes.addClass('nav navbar-nav') }}>
     {% else %}
       <ul class="dropdown-menu">
     {% endif %}
     {% for item in items %}
       {%
         set classes = [
-		  'menu-item',
-		  item.is_expanded ? 'menu-item--expanded',
+          menu_level ? 'dropdown-item' : 'nav-item',
+          item.is_expanded ? 'menu-item--expanded',
           item.is_collapsed ? 'menu-item--collapsed',
           item.in_active_trail ? 'active',
+          item.below ? 'dropdown',
         ]
       %}
-      <li{{ item.attributes.addClass(classes) }} style="float:left; font-family: 'Catamaran', sans-serif;  font-size: 16px;  font-weight: 600;  line-height: 27px;">
+      <li{{ item.attributes.addClass(classes) }}>
         {%
           set link_classes = [
+            not menu_level ? 'nav-link',
             item.in_active_trail ? 'active',
+            item.below ? 'dropdown-toggle',
             item.url.getOption('attributes').class ? item.url.getOption('attributes').class | join(' '),
           ]
         %}
