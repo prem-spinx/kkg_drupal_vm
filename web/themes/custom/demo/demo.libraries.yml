@@ -1,0 +1,9 @@
+global-styling:
+  version: VERSION
+  js:
+    js_kkg/app.js: {}
+    
+  css:
+    component:
+      css_kkg/app.css: {}
+      css_kkg/style.css: {}

@@ -1,0 +1,212 @@
+{{ content.field_banner_section }}
+<section class="attorney-details">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4">
+				<div class="att-avatar">
+					<img src="{{ file_url(content.field_image_a[0]['#media'].field_media_image.entity.uri.value) }}" alt="">
+				</div>
+			</div>
+			<div class="col-lg-8">
+				<div class="att-title">
+					<div class="att-tit-left">
+						<h2>{{ node.label }}</h2>
+						<h5>{{ node.field_designation.value }}</</h5>				
+					</div>
+					<div class="att-tit-right">
+						<a href="javascript;;" class="btn btn-primary" data-toggle="modal" data-target="#myModal">{{ node.field_email_id.title }}</a>
+					</div>
+				</div>
+				<div class="row att-info">
+					<div class="col-sm-6">
+						<div class="att-info-tit">Direct:</div>
+						<p><a href="tel:4044672284">{{ node.field_phon_.value }}</a></p>
+					</div>
+					<div class="col-sm-6">
+						<div class="att-info-tit">FAX:</div>
+						<p>{{ node.field_fax.value }}</</p>
+					</div>
+					<div class="col-sm-6">
+						<div class="att-info-tit">Education:</div>
+						<p>{{ node.field_education.value|raw }}</p>
+					</div>
+					<div class="col-sm-6">
+						<div class="att-info-tit">Bar Admissions:</div>
+						<p>{{ node.field_bar_admissions.value|raw }}</p>
+					</div>
+				</div>
+				<ul class="att-share list-unstyled">
+					<li>
+						<a target="_blank" href="https://www.facebook.com">
+							<img src="https://php.spinxweb.net/kkg/app/themes/kkg/assets/images/fb.png">
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="https://www.twitter.com">
+							<img src="https://php.spinxweb.net/kkg/app/themes/kkg/assets/images/tweet.png">
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="https://www.linkedin.com">
+							<img src="https://php.spinxweb.net/kkg/app/themes/kkg/assets/images/linked.png">
+						</a>
+					</li>				
+				</ul>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-8 tablist">
+				<ul class="nav nav-pills list-unstyled" role="tablist">
+					{% if node.field_biography.value %}
+					<li class="nav-item">
+						<a class="nav-link active" data-toggle="pill" href="#biography">Biography</a>
+					</li>
+					{% endif %}
+					{% if node.field_memberships.value %}
+					<li class="nav-item">
+						<a class="nav-link" data-toggle="pill" href="#memberships">Memberships</a>
+					</li>
+					{% endif %}
+					{% if node.field_admitted_to_practice.value %}
+					<li class="nav-item">
+						<a class="nav-link" data-toggle="pill" href="#admitted-practice">Admitted to practice</a>
+					</li>
+					{% endif %}
+					{% if node.field_publications.value %}
+					<li class="nav-item">
+						<a class="nav-link" data-toggle="pill" href="#publications">Publications</a>
+					</li>
+					{% endif %}
+					{% if node.field_representative_cases.value %}
+					<li class="nav-item">
+						<a class="nav-link" data-toggle="pill" href="#representative-cases">Representative cases</a>
+					</li>
+					{% endif %}
+					{% if node.field_speaking_experiences.value %}
+					<li class="nav-item">
+						<a class="nav-link" data-toggle="pill" href="#speaking-experiences">Speaking Experiences</a>
+					</li>
+					{% endif %}
+				</ul>
+				<div class="tab-content">
+					<div id="biography" class="container tab-pane active">
+						<br>
+						<h3>Biography</h3>
+						<p>{{ node.field_biography.value|raw }}</p>
+					</div>
+					<div id="memberships" class="container tab-pane fade">
+						<br>
+						<h3>Memberships</h3>
+						<p>
+							<span>{{ node.field_memberships.value|raw }}</span>
+						</p>
+					</div>
+					<div id="admitted-practice" class="container tab-pane fade">
+						<br>
+						<h3>Admitted to practice</h3>
+						<p>
+						    <span>{{ node.field_admitted_to_practice.value|raw }}</span>
+						</p>
+					</div>
+					<div id="publications" class="container tab-pane fade">
+						<br>
+						<h3>Publications</h3>
+						<p>
+			                {{ node.field_publications.value|raw }}
+						</p>
+					</div>
+					<div id="representative-cases" class="container tab-pane fade">
+						<br>
+						<h3>Representative cases</h3>
+						{{ node.field_representative_cases.value|raw }}
+					</div>
+					
+					<div id="speaking-experiences" class="container tab-pane fade">
+						<br>
+						<h3>Speaking Experiences</h3>
+						{{ node.field_speaking_experiences.value|raw }}
+					</div>
+					
+				</div>
+			</div>
+		<div class="col-lg-4" style="float:right;">
+		     {{ drupal_view('attorney_related_practices', 'block_1') }}
+	    </div>
+		</div>
+		<div class="next-prev">
+			<a class="np-prev btn btn-primary" href="https://php.spinxweb.net/kkg/attorney/barbara-a-lincoln/">Barbara A. Lincoln</a>
+			<a class="np-next btn btn-primary" href="https://php.spinxweb.net/kkg/attorney/c-joseph-hoffman/">C. Joseph Hoffman</a>
+		</div>
+	</div>
+</section>
+<div class="modal" id="myModal">
+   <div class="modal-dialog modal-dialog-centered modal-xl">
+		<div class="modal-content">
+			<button type="button" class="close" data-dismiss="modal">×</button>        
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-lg-5 modal-content-left">
+                  		<div class="att-avatar">
+							<img src="https://cdn.spinxweb.net/kkg/uploads/2019/10/adman.png" alt=""> 
+						</div>
+				        <div class="modal-att-info">
+							<h3>Adam J. Katz</h3>
+							<ul class="list-unstyled">
+								<li>Counsel</li>
+								<li></li>
+								<li>
+									<span>Direct:</span> 
+									<a href="tel:4044672284">404-467-2284</a>
+								</li>
+								<li>
+									<span>FAX</span>: 404-364-0126
+								</li>                     
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-7 modal-content-right mCustomScrollbar _mCS_1 mCS_no_scrollbar">
+						<div id="mCSB_1" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" style="max-height: 750px;" tabindex="0">
+							<div id="mCSB_1_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
+								<h3 class="mb-3">
+									<u>Before You Contact Us</u>
+								</h3>
+								<h3>If You Are Not A Current Client Of Our Firm:</h3>
+								<p>It is always possible that we already represent someone else who is adverse to you concerning the subject matter of your communication.</p>
+								<p>Before communicating with Kitchens Kelley Gaynes, P.C. (“KKG”) or one of its attorneys by e-mail (or otherwise), please read the Disclaimer. An attorney-client relationship is established only after the following have occurred:</p>
+								<ol>
+									<li>You have had direct communication in person or by telephone with one of our attorneys;</li>
+									<li>KKG has cleared possible conflicts of interest;</li>
+									<li>You and KKG have agreed to the terms of our engagement; and</li>
+									<li>You and KKG have confirmed the terms in writing with an engagement letter.</li>
+								</ol>
+								<p>matter, you should not send us any information that you consider to be sensitive or confidential. We do not assume any responsibility for keeping confidential any information that you send us unless and until we become engaged as your counsel for that matter.</p>
+								<h3>If You Are A Client:</h3>
+								<p>Please bear in mind that e-mail and other information transmitted over the Internet could be misdirected or intercepted. Although there are security risks inherent in any transmission by electronic means, you should be aware of these risks before sending us any sensitive or confidential information over the Internet or by e-mail.</p>
+								<p>Clients and Non-Clients: By clicking “Yes” below, you understand and agree to comply with the above terms.</p>
+								<div class="modal-buttons">
+									<form method="post" action="https://php.spinxweb.net/kkg/attorney-contact/" name="atncontact" id="atncontact">
+										<input type="hidden" value="259" name="aid">
+										<input type="submit" name="sbtForm" hidden="">
+									</form>
+									<a class="btn btn-primary submitFrm" href="javascript:;">Yes</a>
+									<a class="btn btn-secondary" data-dismiss="modal" href="javascript:;">No</a>
+								</div>
+							</div>
+							<div id="mCSB_1_scrollbar_vertical" class="mCSB_scrollTools mCSB_1_scrollbar mCS-light mCSB_scrollTools_vertical" style="display: none;">
+								<div class="mCSB_draggerContainer">
+									<div id="mCSB_1_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; top: 0px;">
+										<div class="mCSB_dragger_bar" style="line-height: 30px;">
+										</div>
+									</div>
+									<div class="mCSB_draggerRail">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div> 
+<!-- Include Core files -->

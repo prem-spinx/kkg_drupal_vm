@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'file:file:18b2a0b9-461b-4c5e-a7bf-37d2e74092b2'
+id: attorneys_banner_
+label: 'Attorneys Banner  '
+icon_uuid: 18b2a0b9-461b-4c5e-a7bf-37d2e74092b2
+description: 'Attorneys Details '
+behavior_plugins: {  }

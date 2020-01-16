@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: listing_image
+label: 'Listing Image(368x250)'
+effects:
+  6797b26a-5a11-44c8-83ed-f8894b985fb0:
+    uuid: 6797b26a-5a11-44c8-83ed-f8894b985fb0
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 368
+      height: 250
+      anchor: center-center

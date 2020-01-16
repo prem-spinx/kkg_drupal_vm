@@ -1,0 +1,9 @@
+name: 'Attorney view'
+description: 'view page of all attorneys'
+type: module
+core: 8.x
+dependencies:
+  - node
+  - user
+  - views
+version: 8.x-1.0

@@ -1,0 +1,33 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_banner_section
+    - node.type.attorney
+    - paragraphs.paragraphs_type.attorneys_banner_
+  module:
+    - entity_reference_revisions
+id: node.attorney.field_banner_section
+field_name: field_banner_section
+entity_type: node
+bundle: attorney
+label: 'banner section'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      attorneys_banner_: attorneys_banner_
+    target_bundles_drag_drop:
+      attorneys_banner_:
+        enabled: true
+        weight: 3
+      practices_parg_:
+        weight: 4
+        enabled: false
+field_type: entity_reference_revisions

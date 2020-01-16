@@ -1,0 +1,10 @@
+<section class="cmn-banner">
+	<img class="div-img" src="{{ file_url(content.field_p_b_image['#items'].entity.uri.value) }}" style="background-image:url({{ file_url(content.field_p_b_image['#items'].entity.uri.value) }})" alt="practice-areas-banner">
+	<div class="container">
+		<div class="banner-content">
+			<h1>{{ label }}</h1>
+			<h3>{{ node.field_p_name.value }}</h3>
+		</div>
+	</div>
+</section>
+{{ content.field_practices_ref }}

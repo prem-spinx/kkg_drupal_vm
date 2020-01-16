@@ -1,0 +1,41 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.attorneys_banner_.field_image
+    - field.field.paragraph.attorneys_banner_.field_subtitle_a
+    - field.field.paragraph.attorneys_banner_.field_title_a
+    - paragraphs.paragraphs_type.attorneys_banner_
+  module:
+    - media_library
+id: paragraph.attorneys_banner_.default
+targetEntityType: paragraph
+bundle: attorneys_banner_
+mode: default
+content:
+  field_image:
+    type: media_library_widget
+    weight: 2
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+  field_subtitle_a:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_title_a:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

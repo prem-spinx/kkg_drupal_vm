@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_subtitle_a
+    - paragraphs.paragraphs_type.attorneys_banner_
+id: paragraph.attorneys_banner_.field_subtitle_a
+field_name: field_subtitle_a
+entity_type: paragraph
+bundle: attorneys_banner_
+label: Subtitle
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

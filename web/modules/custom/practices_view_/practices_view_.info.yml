@@ -1,0 +1,9 @@
+name: 'Practices View '
+type: module
+core: 8.x
+dependencies:
+  - image
+  - node
+  - paragraphs
+  - user
+  - views

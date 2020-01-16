@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_image_a
+    - media.type.image
+    - node.type.attorney
+id: node.attorney.field_image_a
+field_name: field_image_a
+entity_type: node
+bundle: attorney
+label: 'Attorney (Image Dimension W:370 X H:450)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
