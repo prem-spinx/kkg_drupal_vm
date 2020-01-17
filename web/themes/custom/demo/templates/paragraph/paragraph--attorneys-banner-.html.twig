@@ -1,6 +1,6 @@
 
 <section class="cmn-banner">
-	<img class="div-img" src="https://php.spinxweb.net/kkg/app/themes/kkg/assets/images/0.gif" style="background-image:url(https://cdn.spinxweb.net/kkg/uploads/2019/10/att-detail-banner.png" alt="">	
+    <img class="div-img " src="{{ file_url(content.field_image[0]['#media'].field_media_image.entity.uri.value) }}" style="background-image:url({{ file_url(content.field_image_a[0]['#media'].field_media_image.entity.uri.value) }});" alt="practice-areas-banner">
 	<div class="container">
 		<div class="banner-content">
 			<h1>{{ content.field_title_a.0 }}</h1>

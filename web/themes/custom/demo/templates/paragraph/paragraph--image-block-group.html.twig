@@ -1,0 +1,168 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a paragraph.
+ *
+ * Available variables:
+ * - paragraph: Full paragraph entity.
+ *   Only method names starting with "get", "has", or "is" and a few common
+ *   methods such as "id", "label", and "bundle" are available. For example:
+ *   - paragraph.getCreatedTime() will return the paragraph creation timestamp.
+ *   - paragraph.id(): The paragraph ID.
+ *   - paragraph.bundle(): The type of the paragraph, for example, "image" or "text".
+ *   - paragraph.getOwnerId(): The user ID of the paragraph author.
+ *   See Drupal\paragraphs\Entity\Paragraph for a full list of public properties
+ *   and methods for the paragraph object.
+ * - content: All paragraph items. Use {{ content }} to print them all,
+ *   or print a subset such as {{ content.field_example }}. Use
+ *   {{ content|without('field_example') }} to temporarily suppress the printing
+ *   of a given child element.
+ * - attributes: HTML attributes for the containing element.
+ *   The attributes.class element may contain one or more of the following
+ *   classes:
+ *   - paragraphs: The current template type (also known as a "theming hook").
+ *   - paragraphs--type-[type]: The current paragraphs type. For example, if the paragraph is an
+ *     "Image" it would result in "paragraphs--type--image". Note that the machine
+ *     name will often be in a short form of the human readable label.
+ *   - paragraphs--view-mode--[view_mode]: The View Mode of the paragraph; for example, a
+ *     preview would result in: "paragraphs--view-mode--preview", and
+ *     default: "paragraphs--view-mode--default".
+ * - view_mode: View mode; for example, "preview" or "full".
+ * - logged_in: Flag for authenticated user status. Will be true when the
+ *   current user is a logged-in member.
+ * - is_admin: Flag for admin user status. Will be true when the current user
+ *   is an administrator.
+ *
+ * @see template_preprocess_paragraph()
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+{{ content.field_banner }}
+<section class="practice-detail">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <h2>{{ content.field_block_title_text.0 }}</h2>
+            </div>
+			
+			  {{ content.field_content_with_image_ref }}
+			
+            <div class="col-lg-12">
+              <h4>KKG also represents many individuals and families to handle their personal legal needs, some of which are simple and many of which are very complex and sophisticated.</h4>
+            </div>
+            <div class="col-lg-12">
+              <div class="info-box">
+                <img class="div-img" src="img/0.gif" style="background-image:url(img/info-box-bg.png)" alt="">
+                <p>Our clients expect us to be diligent in our efforts to keep our overhead and fees low, to be extraordinarily efficient in the delivery of our legal services, and to understand that the purpose of hiring our firm is for the client to obtain the best possible outcome under the circumstances. We fully understand and endorse all of that.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="practice-sec">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 m-auto sec-title text-center">
+              <h2>Business in Various Industries</h2>
+              <h4>Our representative clients do business in various industries.</h4>
+            </div>
+            <div class="col-lg-12">
+              <div class="row area-list">
+                <div class="col-md-6 col-lg-4">
+                  <a href="https://php.spinxweb.net/kkg/client/commercial-real-estate/" class="area-box">
+                    <span class="area-img">
+                      <img src="img/area-img10.png" alt="" width="370" height="250">
+                    </span>
+                    <span class="area-content">
+                      <span class="h4">Commercial Real Estate</span>
+                      <p>KKG has decades of experience providing comprehensive, sophisticated...</p>
+                      <span class="arrow-link">Read More</span>
+                    </span>
+                  </a>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <a href="https://php.spinxweb.net/kkg/client/construction/" class="area-box">
+                    <span class="area-img">
+                      <img src="img/area-img15.jpg" alt="" width="370" height="250">
+                    </span>
+                    <span class="area-content">
+                      <span class="h4">Construction</span>
+                      <p>Many of KKG’s long time clients are in...</p>
+                      <span class="arrow-link">Read More</span>
+                    </span>
+                  </a>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <a href="https://php.spinxweb.net/kkg/client/financial-institutions-and-lenders/" class="area-box">
+                    <span class="area-img">
+                      <img src="img/area-img3.png" alt="" width="370" height="250">
+                    </span>
+                    <span class="area-content">
+                      <span class="h4">Financial Institutions and Lenders</span>
+                      <p>KKG has substantial experience representing banks and financial...</p>
+                      <span class="arrow-link">Read More</span>
+                    </span>
+                  </a>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <a href="https://php.spinxweb.net/kkg/client/manufacturing-service-industries/" class="area-box">
+                    <span class="area-img">
+                      <img src="img/area-img11.png" alt="" width="370" height="250">
+                    </span>
+                    <span class="area-content">
+                      <span class="h4">Manufacturing, Service Industries</span>
+                      <p>KKG works with clients in a wide range...</p>
+                      <span class="arrow-link">Read More</span>
+                    </span>
+                  </a>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <a href="https://php.spinxweb.net/kkg/client/medical-professional-practices/" class="area-box">
+                    <span class="area-img">
+                      <img src="img/area-img12.png" alt="" width="370" height="250">
+                    </span>
+                    <span class="area-content">
+                      <span class="h4">Medical &amp; Professional Practices</span>
+                      <p>Professionals such as engineers, architects, physicians, accountants, and...</p>
+                      <span class="arrow-link">Read More</span>
+                    </span>
+                  </a>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <a href="https://php.spinxweb.net/kkg/client/small-businesses-sba-lenders/" class="area-box">
+                    <span class="area-img">
+                      <img src="img/area-img13.png" alt="" width="370" height="250">
+                    </span>
+                    <span class="area-content">
+                      <span class="h4">Small Businesses &amp; SBA Lenders</span>
+                      <p>KKG has more than two decades of experience...</p>
+                      <span class="arrow-link">Read More</span>
+                    </span>
+                  </a>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <a href="https://php.spinxweb.net/kkg/client/trusts-and-estates/" class="area-box">
+                    <span class="area-img">
+                      <img src="img/area-img14.png" alt="" width="370" height="250">
+                    </span>
+                    <span class="area-content">
+                      <span class="h4">Trusts and Estates</span>
+                      <p>KKG helps high net worth families and individuals...</p>
+                      <span class="arrow-link">Read More</span>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
