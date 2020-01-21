@@ -1,0 +1,42 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.content_with_image_block.field_block_
+    - field.field.paragraph.content_with_image_block.field_block_image
+    - field.field.paragraph.content_with_image_block.field_image_variation
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.content_with_image_block
+  module:
+    - image
+    - text
+id: paragraph.content_with_image_block.default
+targetEntityType: paragraph
+bundle: content_with_image_block
+mode: default
+content:
+  field_block_:
+    weight: 0
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_block_image:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_image_variation:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true

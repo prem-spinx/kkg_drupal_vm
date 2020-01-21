@@ -1,0 +1,39 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_content_with_image_ref
+    - paragraphs.paragraphs_type.content_with_image_block
+    - paragraphs.paragraphs_type.image_block_group
+  module:
+    - entity_reference_revisions
+id: paragraph.image_block_group.field_content_with_image_ref
+field_name: field_content_with_image_ref
+entity_type: paragraph
+bundle: image_block_group
+label: 'content with image ref'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      content_with_image_block: content_with_image_block
+    target_bundles_drag_drop:
+      attorneys_banner_:
+        weight: 5
+        enabled: false
+      content_with_image_block:
+        enabled: true
+        weight: 6
+      image_block_group:
+        weight: 7
+        enabled: false
+      practices_parg_:
+        weight: 8
+        enabled: false
+field_type: entity_reference_revisions

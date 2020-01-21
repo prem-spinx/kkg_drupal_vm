@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.intoduction_block
+    - field.field.block_content.intoduction_block.field_content
+  module:
+    - text
+id: block_content.intoduction_block.default
+targetEntityType: block_content
+bundle: intoduction_block
+mode: default
+content:
+  field_content:
+    weight: 27
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

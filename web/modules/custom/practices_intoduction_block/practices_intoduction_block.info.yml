@@ -1,0 +1,9 @@
+name: 'Practices Intoduction block'
+description: 'Intoduction block of practices'
+type: module
+core: 8.x
+dependencies:
+  - block_content
+  - field
+  - text
+version: 8.x-1.0

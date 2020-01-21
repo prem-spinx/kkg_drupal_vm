@@ -1,0 +1,15 @@
+name: 'Hero component'
+description: 'It contains two-paragraph type 1.content with image block(title,content,image,variation) 2. component group(referance of content with image block ).'
+type: module
+core: 8.x
+dependencies:
+  - ds
+  - entity_reference_revisions
+  - field
+  - file
+  - image
+  - options
+  - paragraphs
+  - text
+version: 8.x-1.0
+core_incompatible: false

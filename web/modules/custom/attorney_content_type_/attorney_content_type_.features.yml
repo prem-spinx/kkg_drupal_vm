@@ -1,4 +1,0 @@
-excluded:
-  - core.entity_view_display.node.attorney.teaser
-  - media.type.image
-required: true

@@ -1,8 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: practices_parg_
-label: 'Content Section'
-icon_uuid: null
-description: 'banner paragraph'
-behavior_plugins: {  }
