@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cta_link
+    - paragraphs.paragraphs_type.cta_component
+  module:
+    - link
+id: paragraph.cta_component.field_cta_link
+field_name: field_cta_link
+entity_type: paragraph
+bundle: cta_component
+label: 'CTA LINK'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

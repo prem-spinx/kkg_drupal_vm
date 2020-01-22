@@ -1,0 +1,54 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cta_text_component.field_background_image
+    - field.field.paragraph.cta_text_component.field_description
+    - field.field.paragraph.cta_text_component.field_link
+    - field.field.paragraph.cta_text_component.field_title_cta_text
+    - paragraphs.paragraphs_type.cta_text_component
+  module:
+    - link
+    - text
+id: paragraph.cta_text_component.default
+targetEntityType: paragraph
+bundle: cta_text_component
+mode: default
+content:
+  field_background_image:
+    type: entity_reference_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: only_url_image
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_description:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_link:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_title_cta_text:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

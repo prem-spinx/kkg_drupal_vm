@@ -1,0 +1,35 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cta_component.field_cta_ima
+    - field.field.paragraph.cta_component.field_cta_link
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.cta_component
+  module:
+    - image
+    - link
+id: paragraph.cta_component.default
+targetEntityType: paragraph
+bundle: cta_component
+mode: default
+content:
+  field_cta_ima:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_cta_link:
+    weight: 0
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+hidden:
+  created: true
+  status: true

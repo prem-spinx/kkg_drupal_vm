@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.hero_cta_component.field_ctc_compo
+    - paragraphs.paragraphs_type.hero_cta_component
+  module:
+    - entity_reference_revisions
+id: paragraph.hero_cta_component.default
+targetEntityType: paragraph
+bundle: hero_cta_component
+mode: default
+content:
+  field_ctc_compo:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

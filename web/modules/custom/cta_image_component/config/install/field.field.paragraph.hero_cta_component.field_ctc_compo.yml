@@ -1,0 +1,54 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ctc_compo
+    - paragraphs.paragraphs_type.cta_component
+    - paragraphs.paragraphs_type.hero_cta_component
+  module:
+    - entity_reference_revisions
+id: paragraph.hero_cta_component.field_ctc_compo
+field_name: field_ctc_compo
+entity_type: paragraph
+bundle: hero_cta_component
+label: 'ctc componenet'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      cta_component: cta_component
+    target_bundles_drag_drop:
+      attorneys_banner_:
+        weight: 10
+        enabled: false
+      banner:
+        weight: 11
+        enabled: false
+      content_with_image_block:
+        weight: 12
+        enabled: false
+      cta_component:
+        enabled: true
+        weight: 13
+      cta_text_component:
+        weight: 14
+        enabled: false
+      hero_cta_component:
+        weight: 15
+        enabled: false
+      image_block_group:
+        weight: 16
+        enabled: false
+      practices_parg_:
+        weight: 17
+        enabled: false
+      testimonial_component:
+        weight: 18
+        enabled: false
+field_type: entity_reference_revisions

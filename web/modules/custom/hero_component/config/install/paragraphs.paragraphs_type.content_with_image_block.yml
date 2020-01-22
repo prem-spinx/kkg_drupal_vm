@@ -1,8 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: content_with_image_block
-label: 'content with image block'
-icon_uuid: null
-description: ''
-behavior_plugins: {  }

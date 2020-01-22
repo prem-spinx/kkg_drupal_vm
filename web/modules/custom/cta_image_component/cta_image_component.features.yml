@@ -1,0 +1,7 @@
+excluded:
+  - paragraphs.paragraphs_type.attorneys_banner_
+  - core.entity_form_display.node.home_page.default
+  - core.entity_view_display.node.home_page.default
+  - core.entity_view_display.node.home_page.teaser
+  - field.field.node.home_page.field_image_cta_comp
+required: true

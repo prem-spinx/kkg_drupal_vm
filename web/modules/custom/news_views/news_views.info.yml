@@ -1,0 +1,11 @@
+name: 'news views'
+description: 'It contain two views 1. all news page  2. latest news block '
+type: module
+core: 8.x
+dependencies:
+  - datetime
+  - node
+  - paragraphs
+  - user
+  - views
+version: 8.x-1.0

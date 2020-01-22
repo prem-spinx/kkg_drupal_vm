@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: cta_text_component
+label: 'cta text component'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

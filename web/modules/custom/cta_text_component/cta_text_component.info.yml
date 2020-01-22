@@ -1,0 +1,13 @@
+name: 'Cta text Component'
+description: 'Simple paragraph with four fields '
+type: module
+core: 8.x
+dependencies:
+  - field
+  - link
+  - media
+  - media_library
+  - paragraphs
+  - text
+version: 8.x-1.0
+core_incompatible: false

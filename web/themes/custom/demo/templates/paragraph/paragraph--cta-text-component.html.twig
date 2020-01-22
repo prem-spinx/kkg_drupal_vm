@@ -38,12 +38,19 @@
  * @ingroup themeable
  */
 #}
-<section class="hp-our-sec">
+<section class="hp-exp">
         <div class="container">
           <div class="row">
-          {{ content.field_ctc_compo }}
-		  </div>
+            <div class="col-md-6 col-lg-5 offset-lg-1 hp-exp-left d-flex align-items-center">
+              <img class="div-img" src="{{ content.field_background_image.0|render|trim|striptags }}" alt="Clip Image" />
+              <div>
+                <h2>{{ content.field_title_cta_text.0 }}</h2>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 offset-lg-1 hp-exp-right align-self-center">
+			{{ content.field_description.0|raw }}
+              <a class="btn btn-primary" href="https://php.spinxweb.net/kkg/our-clients/">{{ content.field_link.0['#title'] }}</a>
+            </div>
+          </div>
         </div>
 </section>
-		 
- 

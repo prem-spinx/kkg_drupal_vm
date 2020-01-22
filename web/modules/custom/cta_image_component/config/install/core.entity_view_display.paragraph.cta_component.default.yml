@@ -1,0 +1,36 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cta_component.field_cta_ima
+    - field.field.paragraph.cta_component.field_cta_link
+    - paragraphs.paragraphs_type.cta_component
+  module:
+    - image
+    - link
+id: paragraph.cta_component.default
+targetEntityType: paragraph
+bundle: cta_component
+mode: default
+content:
+  field_cta_ima:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: ''
+    third_party_settings: {  }
+    type: image_url
+    region: content
+  field_cta_link:
+    weight: 0
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden: {  }

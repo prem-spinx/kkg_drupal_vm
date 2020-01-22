@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: intoduction_block
-label: 'Intoduction block'
-revision: 0
-description: ''
