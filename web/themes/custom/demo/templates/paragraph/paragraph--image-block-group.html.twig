@@ -38,14 +38,7 @@
  * @ingroup themeable
  */
 #}
-{%
-  set classes = [
-    'paragraph',
-    'paragraph--type--' ~ paragraph.bundle|clean_class,
-    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
-    not paragraph.isPublished() ? 'paragraph--unpublished'
-  ]
-%}
+
 {{ content.field_banner }}
 <section class="practice-detail">
         <div class="container">
@@ -67,102 +60,5 @@
             </div>
           </div>
         </div>
-      </section>
-      <section class="practice-sec">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8 m-auto sec-title text-center">
-              <h2>Business in Various Industries</h2>
-              <h4>Our representative clients do business in various industries.</h4>
-            </div>
-            <div class="col-lg-12">
-              <div class="row area-list">
-                <div class="col-md-6 col-lg-4">
-                  <a href="https://php.spinxweb.net/kkg/client/commercial-real-estate/" class="area-box">
-                    <span class="area-img">
-                      <img src="img/area-img10.png" alt="" width="370" height="250">
-                    </span>
-                    <span class="area-content">
-                      <span class="h4">Commercial Real Estate</span>
-                      <p>KKG has decades of experience providing comprehensive, sophisticated...</p>
-                      <span class="arrow-link">Read More</span>
-                    </span>
-                  </a>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                  <a href="https://php.spinxweb.net/kkg/client/construction/" class="area-box">
-                    <span class="area-img">
-                      <img src="img/area-img15.jpg" alt="" width="370" height="250">
-                    </span>
-                    <span class="area-content">
-                      <span class="h4">Construction</span>
-                      <p>Many of KKG’s long time clients are in...</p>
-                      <span class="arrow-link">Read More</span>
-                    </span>
-                  </a>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                  <a href="https://php.spinxweb.net/kkg/client/financial-institutions-and-lenders/" class="area-box">
-                    <span class="area-img">
-                      <img src="img/area-img3.png" alt="" width="370" height="250">
-                    </span>
-                    <span class="area-content">
-                      <span class="h4">Financial Institutions and Lenders</span>
-                      <p>KKG has substantial experience representing banks and financial...</p>
-                      <span class="arrow-link">Read More</span>
-                    </span>
-                  </a>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                  <a href="https://php.spinxweb.net/kkg/client/manufacturing-service-industries/" class="area-box">
-                    <span class="area-img">
-                      <img src="img/area-img11.png" alt="" width="370" height="250">
-                    </span>
-                    <span class="area-content">
-                      <span class="h4">Manufacturing, Service Industries</span>
-                      <p>KKG works with clients in a wide range...</p>
-                      <span class="arrow-link">Read More</span>
-                    </span>
-                  </a>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                  <a href="https://php.spinxweb.net/kkg/client/medical-professional-practices/" class="area-box">
-                    <span class="area-img">
-                      <img src="img/area-img12.png" alt="" width="370" height="250">
-                    </span>
-                    <span class="area-content">
-                      <span class="h4">Medical &amp; Professional Practices</span>
-                      <p>Professionals such as engineers, architects, physicians, accountants, and...</p>
-                      <span class="arrow-link">Read More</span>
-                    </span>
-                  </a>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                  <a href="https://php.spinxweb.net/kkg/client/small-businesses-sba-lenders/" class="area-box">
-                    <span class="area-img">
-                      <img src="img/area-img13.png" alt="" width="370" height="250">
-                    </span>
-                    <span class="area-content">
-                      <span class="h4">Small Businesses &amp; SBA Lenders</span>
-                      <p>KKG has more than two decades of experience...</p>
-                      <span class="arrow-link">Read More</span>
-                    </span>
-                  </a>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                  <a href="https://php.spinxweb.net/kkg/client/trusts-and-estates/" class="area-box">
-                    <span class="area-img">
-                      <img src="img/area-img14.png" alt="" width="370" height="250">
-                    </span>
-                    <span class="area-content">
-                      <span class="h4">Trusts and Estates</span>
-                      <p>KKG helps high net worth families and individuals...</p>
-                      <span class="arrow-link">Read More</span>
-                    </span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+</section>
+     

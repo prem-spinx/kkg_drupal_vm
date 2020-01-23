@@ -1,11 +1,13 @@
-<section class="cmn-banner">
-	<img class="div-img" src="{{ file_url(content.field_p_b_image['#items'].entity.uri.value) }}" style="background-image:url({{ file_url(content.field_p_b_image['#items'].entity.uri.value) }})" alt="practice-areas-banner">
-	<div class="container">
-		<div class="banner-content">
-			<h1>{{ label }}</h1>
-			<h3>{{ node.field_p_name.value }}</h3>
+{{ content.field_practice_banner }}
+   <section class="intro-sec">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 m-auto sec-title text-center">
+					<h2>{{ node.title.value }}</h2>
+					<h4>{{ node.field_practice_subtitle.value }}</h4>
+				    {{ node.field_practice_description.value|raw }}
+				</div>
+			</div>
 		</div>
-	</div>
-</section>
-{{ content.field_practices_ref }}
+	</section>
 {{ drupal_view('related_attorneys_block', 'block_1') }}

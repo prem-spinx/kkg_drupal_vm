@@ -40,7 +40,7 @@
 #}
 
 		    <div class="col-md-6">
-				<a href="{{ content.field_cta_link.uri }}" class="hp-our">
+				<a href="{{ content.field_cta_link.0['#url'] }}" class="hp-our">
 						<img class="div-img" src="{{ content.field_cta_ima.0|render|trim|striptags }}" style="background-image:url({{ content.field_cta_ima.0|render|trim|striptags }})" alt="our-industries">
 						<h2>{{ content.field_cta_link.0['#title'] }}</h2>
 				</a>

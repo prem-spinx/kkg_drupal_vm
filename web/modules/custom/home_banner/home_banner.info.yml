@@ -1,0 +1,14 @@
+name: 'Home Banner'
+type: module
+core: 8.x
+dependencies:
+  - block
+  - block_content
+  - field
+  - link
+  - media
+  - media_library
+  - system
+  - text
+version: 8.x-1.0
+core_incompatible: false

@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.home_page_banner_block
+    - field.storage.block_content.field_sub
+  module:
+    - text
+id: block_content.home_page_banner_block.field_sub
+field_name: field_sub
+entity_type: block_content
+bundle: home_page_banner_block
+label: Subtitle
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

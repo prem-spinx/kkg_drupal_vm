@@ -1,0 +1,4 @@
+excluded:
+  - core.entity_form_display.block_content.home_page_banner_block.default
+  - core.entity_view_display.block_content.home_page_banner_block.default
+required: true
