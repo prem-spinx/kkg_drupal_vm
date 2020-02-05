@@ -8745,11 +8745,11 @@ footer {
         min-width: 255px; } }
     .next-prev .btn.np-next, .next-prev .np-next.cn-button.bootstrap {
       padding-right: 70px;
-      background-image: url("../images/right-arrow-white.png");
+      background-image: url("../img/right-arrow-white.png");
       background-position: right 30px center; }
     .next-prev .btn.np-prev, .next-prev .np-prev.cn-button.bootstrap {
       padding-left: 70px;
-      background-image: url("../images/left-arrow-white.png");
+      background-image: url("../img/left-arrow-white.png");
       background-position: left 30px center; }
 
 @media (min-width: 1200px) {

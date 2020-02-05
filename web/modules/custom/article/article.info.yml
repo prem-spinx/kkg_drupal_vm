@@ -3,6 +3,6 @@ description: A simple module to demonstrate Block.
 core: 8.x
 package: Custom
 dependencies:
-- node
-- block
+    - node
+    - block
 type: module

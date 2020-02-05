@@ -29,6 +29,7 @@
         "drupal/ds": "^3.4",
         "drupal/features": "^3.8",
         "drupal/field_collection": "^1.1",
+        "drupal/google_map_field": "^1.5",
         "drupal/module_filter": "^3.1",
         "drupal/paragraphs": "^1.10",
         "drupal/pathauto": "^1.5",
