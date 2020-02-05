@@ -36,23 +36,29 @@
 {{page.content}}
 </main>
 <!-- content section END here -->
-<footer class="site-footer">
-      {% block footer %}
-        <div class="{{ container }}">
-          {% if page.footer_first or page.footer_second or page.footer_third or page.footer_fourth %}
-            <div class="site-footer__top clearfix">
-              {{ page.footer_first }}
+<footer>
+      <div class="footer-info">
+        <img src="/themes/custom/demo/img/0.gif" class="div-img" style="background-image:url(/themes/custom/demo/img/footer-bg.jpg);" alt="Footer Logo">
+        <div class="container">
+          <div class="row">
+			  {{ page.footer_first }}
               {{ page.footer_second }}
               {{ page.footer_third }}
               {{ page.footer_fourth }}
-            </div>
-          {% endif %}
-          {% if page.footer_fifth %}
-            <div class="site-footer__bottom">
-              {{ page.footer_fifth }}
-            </div>
-          {% endif %}
+          </div>
         </div>
-      {% endblock %}
+      </div>
+      <div class="copyright">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 copy-txt">
+              © {{ 'now'|date('Y') }} Kitchens Kelley Gaynes, P.C.&nbsp; | &nbsp;<a href="https://php.spinxweb.net/kkg/privacy-policy/">Privacy Policy</a>&nbsp; | &nbsp;<a href="https://php.spinxweb.net/kkg/terms-of-use/">Terms of Use</a>&nbsp; | &nbsp;<a href="https://php.spinxweb.net/kkg/disclaimer/">Disclaimer </a>
+            </div>
+            <div class="col-md-6 text-center text-md-right pt-2 pt-md-0">
+              <a href="https://www.spinxdigital.com/" rel="noopener" target="_blank">Design by SPINX Digital</a>
+            </div>
+          </div>
+        </div>
+      </div>
 </footer>
 </div>

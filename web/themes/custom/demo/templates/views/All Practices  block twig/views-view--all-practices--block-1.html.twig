@@ -30,7 +30,6 @@
  * @see template_preprocess_views_view()
  */
 #}
-<div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {% if title %}
     {{ title }}
@@ -42,53 +41,24 @@
       {{ exposed }}
     </div>
   {% endif %}
-  {% if attachment_before %}
-    <div class="attachment attachment-before">
-      {{ attachment_before }}
-    </div>
-  {% endif %}
-
   {% if rows %}
-        <section class="hp-practices-sec">
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-lg-3 text-center text-sm-left">
-              {% if header %}
-				{{ header }}
-			{% endif %}
-              <a href="http://www.drupalvm.test/practices-view" class="btn-link">View all Practices</a>
-              <div id="btnSlide">
-              </div>
-            </div>
             <div class="col-lg-9">
 			<div class="new-at-qe hp-practices" id="hp-practices-slider">
                 {{ rows }}
 			</div>
             </div>
-          </div>
-        </div>
-      </section>
   {% endif %}
 
   {% if pager %}
     {{ pager }}
   {% endif %}
-  {% if attachment_after %}
-    <div class="attachment attachment-after">
-      {{ attachment_after }}
-    </div>
-  {% endif %}
+
   {% if more %}
     {{ more }}
   {% endif %}
   {% if footer %}
-    <div class="view-footer">
-      {{ footer }}
-    </div>
+    
   {% endif %}
   {% if feed_icons %}
-    <div class="feed-icons">
-      {{ feed_icons }}
-    </div>
+   
   {% endif %}
-</div>
