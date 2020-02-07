@@ -5,7 +5,6 @@
 {% set field_attorney_fax  = fields.field_fax.content %}
 {% set field_attorney_phone  = fields.field_phon_.content|render|striptags|trim %}
 {% set nid  = fields.nid.content|render|striptags|trim %}
-
 <div class="col-lg-6 cont-att-block">
   <div class="row align-items-center">
     <div class="col-sm-6">
@@ -46,17 +45,31 @@
               </ul>
             </div>
           </div>
-          <div class="col-lg-7 modal-content-right">
-            {{attorney_contacts_description|raw}}
-            <div class="modal-buttons">
-              <form method="post" action="https://php.spinxweb.net/kkg/attorney-contact/" name="atncontact" id="atncontact259">
-                <input type="hidden" value="259" name="aid">
-                <input type="submit" name="sbtForm" hidden="">
-              </form>
-              <a class="btn btn-primary submitFrm" data-form="atncontact259" href="{{ url('<front>') }}attorney-contact/?aid={{nid}}">Yes</a>
-              <a class="btn btn-secondary" data-dismiss="modal" href="javascript:;">No</a>
-            </div>
-          </div>
+		  <div class="col-lg-7 modal-content-right">
+						<h3 class="mb-3"><u>Before You Contact Us</u></h3>
+						<h3>If You Are Not A Current Client Of Our Firm:</h3>
+						<p>It is always possible that we already represent someone else who is adverse to you concerning the subject matter of your communication.</p>
+						<p>Before communicating with Kitchens Kelley Gaynes, P.C. ("KKG") or one of its attorneys by e-mail (or otherwise), please read the Disclaimer. An attorney-client relationship is established only after the following have occurred:</p>
+						<ol>
+							<li>You have had direct communication in person or by telephone with one of our attorneys;</li>
+							<li>KKG has cleared possible conflicts of interest;</li>
+							<li>You and KKG have agreed to the terms of our engagement; and</li>
+							<li>You and KKG have confirmed the terms in writing with an engagement letter.</li>
+						</ol>
+						<p>matter, you should not send us any information that you consider to be sensitive or confidential. We do not assume any responsibility for keeping confidential any information that you send us unless and until we become engaged as your counsel for that matter.</p>
+						<h3>If You Are A Client:</h3>	
+						<p>Please bear in mind that e-mail and other information transmitted over the Internet could be misdirected or intercepted. Although there are security risks inherent in any transmission by electronic means, you should be aware of these risks before sending us any sensitive or confidential information over the Internet or by e-mail.</p>
+						<p>Clients and Non-Clients: By clicking "Yes" below, you understand and agree to comply with the above terms.</p>
+						<div class="modal-buttons">
+							<form method="post" action="javascript:;" name="atncontact" id="atncontact259">
+							   <input type="hidden" value="259" name="aid">
+							   <input type="submit" name="sbtForm" hidden="">
+							</form>
+					
+			<a class="btn btn-primary submitFrm" data-form="atncontact259" href="{{ url('<front>') }}attorney-contact/?aid={{nid}}">Yes</a>
+            <a class="btn btn-secondary" data-dismiss="modal" href="javascript:;">No</a>
+			</div>
+			</div>
         </div>
       </div>
     </div>
