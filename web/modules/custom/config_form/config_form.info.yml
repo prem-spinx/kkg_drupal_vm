@@ -1,0 +1,5 @@
+name: 'Config Form'
+type: module
+description: for Email Attorneys
+core: 8.x
+package: Custom

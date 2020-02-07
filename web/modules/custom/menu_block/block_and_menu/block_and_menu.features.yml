@@ -1,0 +1,5 @@
+excluded:
+  - block.block.bootstrap_barrio_footer
+  - block.block.bootstrap_barrio_main_menu
+  - block.block.kkgpc_main_menu
+required: true

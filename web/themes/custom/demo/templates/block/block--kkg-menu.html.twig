@@ -40,7 +40,6 @@
   ]
 %}
 {% set heading_id = attributes.id ~ '-menu'|clean_id %}
-<nav id="divNavbar" class="main-navigation navigation navbar-collapse collapse" role="navigation" aria-label="Main menu">
   {# Label. If not displayed, we still provide it for screen readers. #}
   {% if not configuration.label_display %}
     {% set title_attributes = title_attributes.addClass('sr-only') %}

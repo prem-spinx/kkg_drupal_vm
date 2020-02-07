@@ -1,0 +1,67 @@
+
+{% set title  = fields.title.content|render|striptags|trim %}
+{% set field_attorney_profile  = fields.field_image_a.content|render|striptags|trim %}
+{% set field_attorney_designation  = fields.field_designation.content|render|striptags|trim %}
+{% set field_attorney_fax  = fields.field_fax.content %}
+{% set field_attorney_phone  = fields.field_phon_.content|render|striptags|trim %}
+{% set nid  = fields.nid.content|render|striptags|trim %}
+
+<div class="col-lg-6 cont-att-block">
+  <div class="row align-items-center">
+    <div class="col-sm-6">
+      <div class="con-att-avatar">
+        <img src="{{field_attorney_profile}}" width="270" height="340">
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="con-att-title">
+        <h4>{{title}}</h4>
+        <h6 class="att-post">{{field_attorney_designation}}</h6>
+      </div>
+      <p><span>Direct:</span> <a href="tel:{{field_attorney_phone}}">{{field_attorney_phone}}</a><br><span>FAX:</span>{{field_attorney_fax}}</p>
+      <a data-toggle="modal" data-target="#Modal{{nid}}" href="javascript:;" class="btn btn-primary">Email Attorney</a>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="Modal{{nid}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="row">
+          <div class="col-lg-5 modal-content-left">
+            <div class="att-avatar">
+              <img src="{{field_attorney_profile}}" alt="">
+            </div>
+            <div class="modal-att-info">
+              <h3>{{title}}</h3>
+              <ul class="list-unstyled">
+                <li>{{field_attorney_designation}}</li>
+                <li></li>
+                <li><span>Direct:</span> <a href="tel:{{field_attorney_phone}}">{{field_attorney_phone}}</a></li>
+                <li><span>FAX</span>: {{field_attorney_fax}}</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-7 modal-content-right">
+            {{attorney_contacts_description|raw}}
+            <div class="modal-buttons">
+              <form method="post" action="https://php.spinxweb.net/kkg/attorney-contact/" name="atncontact" id="atncontact259">
+                <input type="hidden" value="259" name="aid">
+                <input type="submit" name="sbtForm" hidden="">
+              </form>
+              <a class="btn btn-primary submitFrm" data-form="atncontact259" href="{{ url('<front>') }}attorney-contact/?aid={{nid}}">Yes</a>
+              <a class="btn btn-secondary" data-dismiss="modal" href="javascript:;">No</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+	

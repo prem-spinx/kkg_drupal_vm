@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: firm-footer-menu
+label: 'Firm Footer Menu'
+description: ''
+locked: false

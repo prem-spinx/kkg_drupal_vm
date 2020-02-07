@@ -1,64 +1,60 @@
 <div class="page-wrapper">
-<!-- Header section starts from here -->
-    <header class="fixed-top">
+  <!-- Header section starts from here -->
+  <header class="fixed-top">
     {% block head %}
-    <nav class="navbar navbar-expand-lg">
-	    {% if container_navbar %}
+      <nav class="navbar navbar-expand-lg">
         <div class="container">
-        {% endif %}
-		<!-- Logo -->
-        <a class="navbar-brand" href="/">
-           {{ page.header }}
-        </a>
-        {% if page.primary_menu %}
+          <!-- Logo -->
+
+          {{ page.header }}
+
+          {% if page.primary_menu %}
             <!-- Mobile Menu Icon -->
             <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#divNavbar" aria-controls="divNavbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon">Menu</span></button>
             <!-- Navigation -->
             <div id="divNavbar" class="main-navigation navigation navbar-collapse collapse" role="navigation" aria-label="Main menu">
-                <div class="menu-main-menu-container">
-				    {{ page.primary_menu }}
-                </div>
-             </div>
-		{% endif %}
-		{% if sidebar_collapse %}
-		    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#divNavbar" aria-controls="divNavbar" aria-expanded="false" aria-label="Toggle navigation"></button>
-        {% endif %}
-        {% if container_navbar %}
-        </div>
+              <div class="menu-main-menu-container">
+                {{ page.primary_menu }}
+              </div>
+            </div>
           {% endif %}
-       
-    </nav>
+          {% if sidebar_collapse %}
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#divNavbar" aria-controls="divNavbar" aria-expanded="false" aria-label="Toggle navigation"></button>
+          {% endif %}
+          {% if container_navbar %}
+        </div>
+        {% endif %}
+
+      </nav>
     {% endblock %}
-</header>
-<!-- header section END here -->
-<!-- content section starts from here -->
-<main role="main">
-{{page.content}}
-</main>
-<!-- content section END here -->
-<footer>
-      <div class="footer-info">
-        <img src="/themes/custom/demo/img/0.gif" class="div-img" style="background-image:url(/themes/custom/demo/img/footer-bg.jpg);" alt="Footer Logo">
-        <div class="container">
-          <div class="row">
-			  {{ page.footer_first }}
-              {{ page.footer_second }}
-              {{ page.footer_third }}
-              {{ page.footer_fourth }}
+  </header>
+  <!-- header section END here -->
+  <!-- content section starts from here -->
+  {{page.content}}
+  <!-- content section END here -->
+  <footer>
+    <div class="footer-info">
+      <img src="themes/custom/demo/img/0.gif" class="div-img" style="background-image:url(themes/custom/demo/img/footer-bg.jpg);" alt="Footer Logo">
+      <div class="container">
+        <div class="row">
+          {{ page.footer_first }}
+          {{ page.footer_second }}
+          {{ page.footer_third }}
+          {{ page.footer_fourth }}
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 copy-txt">
+            © {{ 'now'|date('Y') }} Kitchens Kelley Gaynes, P.C.&nbsp; | &nbsp;<a href="https://php.spinxweb.net/kkg/privacy-policy/">Privacy Policy</a>&nbsp; | &nbsp;<a href="https://php.spinxweb.net/kkg/terms-of-use/">Terms of Use</a>&nbsp; | &nbsp;<a href="https://php.spinxweb.net/kkg/disclaimer/">Disclaimer </a>
+          </div>
+          <div class="col-md-6 text-center text-md-right pt-2 pt-md-0">
+            <a href="https://www.spinxdigital.com/" rel="noopener" target="_blank">Design by SPINX Digital</a>
           </div>
         </div>
       </div>
-      <div class="copyright">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6 copy-txt">
-              © {{ 'now'|date('Y') }} Kitchens Kelley Gaynes, P.C.&nbsp; | &nbsp;<a href="https://php.spinxweb.net/kkg/privacy-policy/">Privacy Policy</a>&nbsp; | &nbsp;<a href="https://php.spinxweb.net/kkg/terms-of-use/">Terms of Use</a>&nbsp; | &nbsp;<a href="https://php.spinxweb.net/kkg/disclaimer/">Disclaimer </a>
-            </div>
-            <div class="col-md-6 text-center text-md-right pt-2 pt-md-0">
-              <a href="https://www.spinxdigital.com/" rel="noopener" target="_blank">Design by SPINX Digital</a>
-            </div>
-          </div>
-        </div>
-      </div>
-</footer>
+    </div>
+  </footer>
 </div>
