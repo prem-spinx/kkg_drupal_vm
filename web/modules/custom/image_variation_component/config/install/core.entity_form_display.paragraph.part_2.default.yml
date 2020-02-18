@@ -1,0 +1,42 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.part_2.field_part_2_content
+    - field.field.paragraph.part_2.field_part_2_image
+    - field.field.paragraph.part_2.field_part_2_title
+    - paragraphs.paragraphs_type.part_2
+  module:
+    - media_library
+    - text
+id: paragraph.part_2.default
+targetEntityType: paragraph
+bundle: part_2
+mode: default
+content:
+  field_part_2_content:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_part_2_image:
+    type: media_library_widget
+    weight: 1
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+  field_part_2_title:
+    weight: 0
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+hidden:
+  created: true
+  status: true

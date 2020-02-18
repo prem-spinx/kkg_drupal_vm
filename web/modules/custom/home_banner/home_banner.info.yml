@@ -1,4 +1,5 @@
-name: 'Home Banner'
+name: 'Home page Banner Block'
+description: 'its main home page banner block '
 type: module
 core: 8.x
 dependencies:

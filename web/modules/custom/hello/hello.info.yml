@@ -1,4 +1,0 @@
-name: 'Hello'
-description: 'Just a Hello text'
-core: 8.x
-type: module

@@ -31,6 +31,7 @@
  * @ingroup themeable
  */
 #}
+{% if fields.view_node.content|striptags|trim|render %}
 <div class="col-md-6 col-lg-4">
 	    <a href="{{ fields.view_node_1.content|striptags|trim|render }}" class="area-box">
 		<span class="area-img">
@@ -44,5 +45,6 @@
 		</span>
 	</a>
 </div>
+{% endif %}
 
 	

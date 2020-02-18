@@ -31,6 +31,7 @@
  * @ingroup themeable
  */
 #}
+{% if  fields.title.content  %}
 <div class="col-lg-4">
   <div class="att-avatar">
     <img src="{{ fields.field_image_a.content|render|trim|striptags }}" alt="" >
@@ -86,6 +87,8 @@
 			</li>				
 		</ul>
 </div>
+{% endif %}
+
 
 
 	

@@ -40,13 +40,13 @@
           menu_level ?  'menu-item',
           item.is_expanded ? 'menu-item--expanded',
           item.is_collapsed ? 'menu-item--collapsed',
-          item.in_active_trail ? 'active',
         ]
       %}
       <li{{ item.attributes.addClass(classes) }}>
         {%
           set link_classes = [
             item.url.getOption('attributes').class ? item.url.getOption('attributes').class | join(' '),
+			
           ]
         %}
         {% if item.below %}

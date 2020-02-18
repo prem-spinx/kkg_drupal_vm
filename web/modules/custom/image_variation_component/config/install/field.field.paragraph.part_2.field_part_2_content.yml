@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_part_2_content
+    - paragraphs.paragraphs_type.part_2
+  module:
+    - text
+id: paragraph.part_2.field_part_2_content
+field_name: field_part_2_content
+entity_type: paragraph
+bundle: part_2
+label: 'Part 2 Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

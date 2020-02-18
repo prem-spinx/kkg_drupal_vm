@@ -1,6 +1,0 @@
-excluded:
-  - paragraphs.paragraphs_type.attorneys_banner_
-  - core.entity_view_display.node.news.teaser
-  - views.view.latest_news
-  - views.view.whats_new
-required: true

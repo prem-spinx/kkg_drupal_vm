@@ -11,7 +11,7 @@ dependencies:
 id: homepagebannerblock
 theme: demo
 region: content
-weight: -10
+weight: -11
 provider: null
 plugin: 'block_content:ccf04587-9841-40c8-9bfb-0cea75cd29da'
 settings:
@@ -25,6 +25,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: /node/31
+    pages: '<front>'
     negate: false
     context_mapping: {  }

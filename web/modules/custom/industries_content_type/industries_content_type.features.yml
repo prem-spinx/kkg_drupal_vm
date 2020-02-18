@@ -1,5 +1,0 @@
-excluded:
-  - core.entity_view_display.node.industries.teaser
-  - core.base_field_override.node.industries.promote
-  - block.block.views_block__industries_block_block_1
-required: true

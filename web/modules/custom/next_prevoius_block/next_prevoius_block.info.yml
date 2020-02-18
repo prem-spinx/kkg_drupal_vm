@@ -1,8 +1,0 @@
-name: Next And Previous node button
-description: 'A simple module to demonstrate Block.'
-core: 8.x
-package: Custom
-dependencies:
-    - node
-    - block
-type: module

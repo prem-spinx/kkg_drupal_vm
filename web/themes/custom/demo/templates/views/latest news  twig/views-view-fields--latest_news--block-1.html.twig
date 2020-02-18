@@ -31,9 +31,10 @@
  * @ingroup themeable
  */
 #}
+{% if  fields.field_date_posted.content  %}
 <a href="{{ fields.view_node.content|striptags|trim|render }}" class="col-lg-3 col-sm-6 hp-post">
             <span class="h6">{{ fields.field_date_posted.content }}</span>
             <p>{{ fields.title.content }}</p>
 </a>
-
+{% endif %}
 	

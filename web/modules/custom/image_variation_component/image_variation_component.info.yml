@@ -1,0 +1,19 @@
+name: 'image variation component'
+description: 'it contains two paragraph type of image varition and clients and kkg . first part and secend part paragraph with three fields. '
+type: module
+core: 8.x
+dependencies:
+  - ds
+  - entity_reference_revisions
+  - field
+  - file
+  - image
+  - media
+  - media_library
+  - options
+  - paragraphs
+  - path
+  - text
+  - user
+version: 8.x-1.0
+core_incompatible: false

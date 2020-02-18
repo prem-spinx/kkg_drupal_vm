@@ -5,6 +5,7 @@
 {% set field_attorney_fax  = fields.field_fax.content %}
 {% set field_attorney_phone  = fields.field_phon_.content|render|striptags|trim %}
 {% set nid  = fields.nid.content|render|striptags|trim %}
+{% if  fields.title.content  %}
 <div class="col-lg-6 cont-att-block">
   <div class="row align-items-center">
     <div class="col-sm-6">
@@ -75,6 +76,6 @@
     </div>
   </div>
 </div>
-
+{% endif %}
 
 	

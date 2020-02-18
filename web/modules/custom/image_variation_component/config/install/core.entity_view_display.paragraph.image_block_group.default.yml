@@ -1,0 +1,35 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.image_block_group.field_block_title_text
+    - field.field.paragraph.image_block_group.field_content_with_image_ref
+    - paragraphs.paragraphs_type.image_block_group
+  module:
+    - ds
+    - entity_reference_revisions
+id: paragraph.image_block_group.default
+targetEntityType: paragraph
+bundle: image_block_group
+mode: default
+content:
+  field_block_title_text:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_content_with_image_ref:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: style
+      link: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
+    region: content
+hidden: {  }

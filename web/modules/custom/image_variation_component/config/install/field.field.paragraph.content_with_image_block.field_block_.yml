@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_block_
+    - paragraphs.paragraphs_type.content_with_image_block
+  module:
+    - text
+id: paragraph.content_with_image_block.field_block_
+field_name: field_block_
+entity_type: paragraph
+bundle: content_with_image_block
+label: 'block text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

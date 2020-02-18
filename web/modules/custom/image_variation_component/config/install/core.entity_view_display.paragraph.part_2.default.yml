@@ -1,0 +1,39 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.part_2.field_part_2_content
+    - field.field.paragraph.part_2.field_part_2_image
+    - field.field.paragraph.part_2.field_part_2_title
+    - paragraphs.paragraphs_type.part_2
+  module:
+    - text
+id: paragraph.part_2.default
+targetEntityType: paragraph
+bundle: part_2
+mode: default
+content:
+  field_part_2_content:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_part_2_image:
+    type: entity_reference_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: only_url_image
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_part_2_title:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

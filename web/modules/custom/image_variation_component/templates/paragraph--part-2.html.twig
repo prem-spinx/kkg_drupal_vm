@@ -1,0 +1,9 @@
+<div class="col-lg-12">
+  {{ content.field_part_2_title.0|raw }}
+</div>
+<div class="col-lg-12">
+  <div class="info-box">
+    <img class="div-img" src="{{ file_url(content.field_part_2_image[0]['#media'].field_media_image.entity.uri.value) }}" style="background-image:url({{ file_url(content.field_part_2_image[0]['#media'].field_media_image.entity.uri.value) }})" alt="">
+    {{ content.field_part_2_content.0|raw }}
+  </div>
+</div>

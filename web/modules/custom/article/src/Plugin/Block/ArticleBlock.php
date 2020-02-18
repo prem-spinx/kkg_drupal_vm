@@ -64,10 +64,18 @@ class ArticleBlock extends BlockBase {
 	  $p_node_k = $c_node - 1;
 	  // fetch the  value of key 
 	  $p_node = $node_order[$p_node_k];
-      $n_node= $node_order[$n_node_k];
+      $n_node = $node_order[$n_node_k];
+	  
+	  
+	  $f_node = current($node_order);
+	  $l_node = end($node_order);
+	  
 	  //get the url alias 
 	  $p_alias = \Drupal::service('path.alias_manager')->getAliasByPath('/node/'.$p_node);
       $n_alias = \Drupal::service('path.alias_manager')->getAliasByPath('/node/'.$n_node);
+	  
+	  $f_alias = \Drupal::service('path.alias_manager')->getAliasByPath('/node/'.$f_node);
+	  $l_alias = \Drupal::service('path.alias_manager')->getAliasByPath('/node/'.$l_node);
 	  
 	  //name and id of node 
 	  $p_node_id = \Drupal::entityTypeManager()->getStorage('node')->load($p_node);
@@ -76,9 +84,22 @@ class ArticleBlock extends BlockBase {
 	  $n_node_id = \Drupal::entityTypeManager()->getStorage('node')->load($n_node);
       $n_node_name = isset($n_node_id) ? $n_node_id->get('title')->getValue() : '';
 	  
+	  
+	  $f_node_id = \Drupal::entityTypeManager()->getStorage('node')->load($f_node);
+      $f_node_name = isset($f_node_id) ? $f_node_id->get('title')->getValue() : '';
+	  
+	  $l_node_id = \Drupal::entityTypeManager()->getStorage('node')->load($l_node);
+      $l_node_name = isset($l_node_id) ? $l_node_id->get('title')->getValue() : '';
+	  
+	  
 	  // get the actual link
 	  $pre_link = $p_node_name[0]['value'];
       $next_link = $n_node_name[0]['value'];
+	  
+	  // get the last and first link
+	  
+	  $last_link = $l_node_name[0]['value'];
+	  $first_link = $f_node_name[0]['value'];
 	  // for both node inactive
 	  if(empty($p_node_id) && empty($n_node_id)){
       	$strPager = '
@@ -89,6 +110,7 @@ class ArticleBlock extends BlockBase {
       } elseif (empty($p_node_id) && !empty($n_node_id)) {
       	$strPager = '
               <div class="'.$class.'">
+			  <a class="np-prev btn btn-primary" href="'.$base_url.'/'. $l_alias .' ">'.$last_link.'</a>
               <a class="np-next btn btn-primary" href="'.$base_url.'/'. $n_alias .' ">'.$next_link.'</a>
               </div>';
 	  // for pervious node active
@@ -97,7 +119,8 @@ class ArticleBlock extends BlockBase {
       	$strPager = '
               <div class="'.$class.'">
               <a class="np-prev btn btn-primary" href="'.$base_url.'/'. $p_alias .' ">'.$pre_link.'</a>
-            <a></a></div>';
+			  <a class="np-next btn btn-primary" href="'.$base_url.'/'. $f_alias .' ">'.$first_link.'</a>
+              </div>';
 	  // both node active
       } elseif (!empty($p_node_id) && !empty($n_node_id)) {
 

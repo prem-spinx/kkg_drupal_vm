@@ -2,6 +2,8 @@ global-styling:
   version: VERSION
   js:
     js_kkg/app.js: {}
+    js_kkg/custom.js: {}
+    js_kkg/attorney.js: {}
     
   css:
     component:

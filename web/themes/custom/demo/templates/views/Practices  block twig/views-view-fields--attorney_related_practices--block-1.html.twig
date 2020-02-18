@@ -31,8 +31,9 @@
  * @ingroup themeable
  */
 #}
+{% if  fields.view_node.content  %}
 <li>
 	<a href="{{ fields.view_node.content|striptags|trim|render }}">{{ fields.field_related_practices.content }}</a>
 </li>
-
+{% endif %}
 	

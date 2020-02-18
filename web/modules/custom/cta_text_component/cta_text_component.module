@@ -1,11 +1,13 @@
 <?php
+
+/**
+ * Implements hook_theme.
+ */
 function cta_text_component_theme($existing, $type, $theme, $path) {
-$someVar = pp;
-dump($someVar);
   return [
-    'paragraph__cta_text-component' => [
+    'paragraph__cta_text_component' => [
       'template' => 'paragraph--cta-text-component',
       'base hook' => 'paragraphs',
-        ],
+    ],
   ];
 }

@@ -1389,3 +1389,45 @@ yx-axis
 }
 
 /*# sourceMappingURL=style.css.map */
+
+
+.user-logged-in header {
+    position: relative;
+	padding-top: 0px;
+	border-bottom: none;
+}
+.user-logged-in body {
+	padding: 0px;
+    font-family: "Martel", serif;
+    font-weight: 300;
+    line-height: 2;
+    color: #494949;
+}
+.toolbar .toolbar-bar{
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	z-index: 2000;
+}
+.clearfix .toolbar-menu li {
+	padding: 0px 0px 0px 0px !important;
+	margin: 0px 0px 0px 0px !important;
+}
+
+.toolbar-menu-administration .col-auto {
+	padding-right: 0px;
+	padding-left: 0px;
+}
+header.scroll-fix {
+	padding: 0px 0px !important;
+}
+
+
+/* google map field */
+section {
+  float: left;
+  padding: 1px 0px;
+  width: 100%; }
+  
+ 

@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * Implements hook_theme.
+ */
+function cta_component_theme($existing, $type, $theme, $path) {
+  return [
+    'paragraph__cta_component' => [
+      'template' => 'paragraph--cta-component',
+      'base hook' => 'paragraphs',
+    ],
+    'paragraph__hero_cta_component' => [
+      'template' => 'paragraph--hero-cta-component',
+      'base hook' => 'paragraphs',
+    ],
+  ];
+}

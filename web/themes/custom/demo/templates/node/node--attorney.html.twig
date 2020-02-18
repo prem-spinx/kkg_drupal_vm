@@ -1,6 +1,5 @@
-{{ content.field_attorneys_banner }}
-<section class="attorney-details">
-	<div class="container">
+<section class="attorney-details acmenu" data-typec="attorney">
+	<div class="container" {{ attributes }}>
 		<div class="row">
 			<div class="col-lg-4">
 				<div class="att-avatar">
@@ -15,7 +14,7 @@
 					</div>
 					<div class="att-tit-right">
 						<a href="javascript;;" class="btn btn-primary" data-toggle="modal"
-						   data-target="#myModal{{ node.id }}">Email Attorney</a>
+						   data-target="#myModal">Email Attorney</a>
 					</div>
 				</div>
 				<div class="row att-info">
@@ -42,18 +41,18 @@
 				</div>
 				<ul class="att-share list-unstyled">
 					<li>
-						<a target="_blank" href="https://www.facebook.com">
-							<img src="https://php.spinxweb.net/kkg/app/themes/kkg/assets/images/fb.png">
+						<a target="_blank" href="{{ node.field_attorney_fb_link.value }}">
+							<img src="{{ base_url }}/{{ directory }}/img/fb.png">
 						</a>
 					</li>
 					<li>
-						<a target="_blank" href="https://www.twitter.com">
-							<img src="https://php.spinxweb.net/kkg/app/themes/kkg/assets/images/tweet.png">
+						<a target="_blank" href="{{ node.field_attorney_tw_link.value }}">
+							<img src="{{ base_url }}/{{ directory }}/img/tweet.png">
 						</a>
 					</li>
 					<li>
-						<a target="_blank" href="https://www.linkedin.com">
-							<img src="https://php.spinxweb.net/kkg/app/themes/kkg/assets/images/linked.png">
+						<a target="_blank" href="{{ node.field_attorney_linkedin_link.value }}">
+							<img src="{{ base_url }}/{{ directory }}/img/linked.png">
 						</a>
 					</li>				
 				</ul>
@@ -140,7 +139,7 @@
 		</div>
 	</div>
 </section>
-<div class="modal" id="myModal{{ node.id }}">
+<div class="modal" id="myModal">
 	<div class="modal-dialog modal-dialog-centered modal-xl">
 		<div class="modal-content">
 			<button type="button" class="close" data-dismiss="modal">×</button>
@@ -186,11 +185,6 @@
 						<p>Please bear in mind that e-mail and other information transmitted over the Internet could be misdirected or intercepted. Although there are security risks inherent in any transmission by electronic means, you should be aware of these risks before sending us any sensitive or confidential information over the Internet or by e-mail.</p>
 						<p>Clients and Non-Clients: By clicking "Yes" below, you understand and agree to comply with the above terms.</p>
 						<div class="modal-buttons">
-							<form method="post" action="javascript:;" name="atncontact" id="atncontact259">
-							   <input type="hidden" value="259" name="aid">
-							   <input type="submit" name="sbtForm" hidden="">
-							</form>
-					
 							<a class="btn btn-primary submitFrm" data-form="atncontact259" href="{{ url('<front>') }}/attorney-contact/?aid={{ node.id }}">Yes</a>
 							<a class="btn btn-secondary" data-dismiss="modal" href="javascript:;">No</a>
 						</div>

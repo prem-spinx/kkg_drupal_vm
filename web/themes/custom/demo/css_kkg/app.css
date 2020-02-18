@@ -7302,7 +7302,7 @@ ul {
     padding: 0px 0px 0px 35px;
     position: relative; }
     ul > li:before {
-      content: normal;
+      content: "";
       position: absolute;
       left: 0px;
       top: 6px;

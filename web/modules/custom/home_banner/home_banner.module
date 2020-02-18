@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * Implements hook_theme.
+ */
+function home_banner_theme($existing, $type, $theme, $path) {
+  return [
+    'paragraph__cta_text_component' => [
+      'template' => 'paragraph--cta-text-component',
+      'base hook' => 'paragraphs',
+    ],
+  ];
+}

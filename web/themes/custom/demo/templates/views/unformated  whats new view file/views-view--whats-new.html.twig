@@ -39,7 +39,9 @@
     dom_id ? 'js-view-dom-id-' ~ dom_id,
   ]
 %}
-<div{{ attributes.addClass(classes) }}>
+<section class="practice-sec whats-new">
+<div class="container">
+<div class="row">
   {{ title_prefix }}
   {% if title %}
     {{ title }}
@@ -47,8 +49,11 @@
   {{ title_suffix }}
   
   {% if exposed %}
-    <div class="view-filters">
-      {{ exposed }}
+    <div class="col-lg-3">
+        <div class="sidebar">
+		<span class="sidebar-title"> What’s New</span>
+            {{ exposed }}
+        </div>
     </div>
   {% endif %}
   {% if attachment_before %}
@@ -58,27 +63,11 @@
   {% endif %}
 
   {% if rows %}
-<section class="practice-sec whats-new">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-3">
-              <div class="sidebar">
-                <span class="sidebar-title"> What’s New</span>
-                <ul class="list-unstyled">
-                  <li><a href="javascript:;">Firm News</a></li>
-                  <li><a href="javascript:;">Legal Alerts</a></li>
-                  <li><a href="/representative.html">Representative Transactions</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-lg-9">
-              <div class="row area-list">
-			  {{ rows }}
-              </div>
-            </div>
-          </div>
-        </div>
-</section>
+		<div class="col-lg-9">
+			<div class="row area-list">
+				{{ rows }}
+			</div>
+		</div>
   {% elseif empty %}
     <div class="view-empty">
       {{ empty }}
@@ -107,6 +96,9 @@
     </div>
   {% endif %}
 </div>
+</div>
+</section>
+
 
       
       

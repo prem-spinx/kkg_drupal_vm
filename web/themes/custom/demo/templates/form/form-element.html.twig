@@ -130,6 +130,8 @@
   </div>
 {% else %}
   <fieldset{{ attributes.addClass(classes, 'form-group col-auto') }}>
+  <div class="form-label">
+  <span>
     {% if label_display in ['before', 'invisible'] %}
       {{ label }}
     {% endif %}
@@ -158,5 +160,7 @@
         {{ description.content }}
       </small>
     {% endif %}
+	</div>
+	</span>
   </fieldset>
 {% endif %}

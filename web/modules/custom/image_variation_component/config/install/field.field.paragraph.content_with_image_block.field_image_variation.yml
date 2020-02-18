@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image_variation
+    - paragraphs.paragraphs_type.content_with_image_block
+  module:
+    - options
+id: paragraph.content_with_image_block.field_image_variation
+field_name: field_image_variation
+entity_type: paragraph
+bundle: content_with_image_block
+label: 'image variation'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: right_image
+default_value_callback: ''
+settings: {  }
+field_type: list_string

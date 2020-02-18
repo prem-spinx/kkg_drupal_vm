@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_part_2_image
+    - media.type.image
+    - paragraphs.paragraphs_type.part_2
+id: paragraph.part_2.field_part_2_image
+field_name: field_part_2_image
+entity_type: paragraph
+bundle: part_2
+label: 'part 2 image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

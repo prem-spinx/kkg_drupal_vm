@@ -1,0 +1,62 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_content_with_image_ref
+    - paragraphs.paragraphs_type.content_with_image_block
+    - paragraphs.paragraphs_type.image_block_group
+    - paragraphs.paragraphs_type.part_2
+  module:
+    - entity_reference_revisions
+id: paragraph.image_block_group.field_content_with_image_ref
+field_name: field_content_with_image_ref
+entity_type: paragraph
+bundle: image_block_group
+label: 'content with image ref'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      content_with_image_block: content_with_image_block
+      part_2: part_2
+    target_bundles_drag_drop:
+      content_with_image_block:
+        enabled: true
+        weight: 6
+      image_block_group:
+        weight: 7
+        enabled: false
+      banner_component:
+        weight: 11
+        enabled: false
+      contact_us:
+        weight: 12
+        enabled: false
+      contact_page_:
+        weight: 13
+        enabled: false
+      cta_component:
+        weight: 14
+        enabled: false
+      cta_text_component:
+        weight: 15
+        enabled: false
+      hero_cta_component:
+        weight: 16
+        enabled: false
+      latest_news_component:
+        weight: 18
+        enabled: false
+      list_all_practices:
+        weight: 19
+        enabled: false
+      part_2:
+        enabled: true
+        weight: 20
+field_type: entity_reference_revisions

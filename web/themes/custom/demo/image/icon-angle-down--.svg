@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="8px" viewBox="0 0 12 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 57.1 (101010) - https://sketch.com -->
+    <title>726223ED-A261-4684-A6A7-3120E44592C1@2x</title>
+    <desc>Created with sketchtool.</desc>
+    <g id="Backend" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Guide---Modules---V2" transform="translate(-1064.000000, -2724.000000)" fill="#982649" fill-rule="nonzero">
+            <g id="Accordions" transform="translate(136.000000, 2626.000000)">
+                <g id="Accordion-/-Collapsed-Accordion-/-No-Icon-/-Collapsed" transform="translate(199.000000, 55.000000)">
+                    <g id="Shell">
+                        <g id="Group-2">
+                            <path d="M734.701158,50.4773453 L729.498046,45.316427 C729.332805,45.1511861 729.332805,44.884013 729.498046,44.7187721 L730.194131,44.0226869 C730.359372,43.8574461 730.626545,43.8574461 730.791786,44.0226869 L734.999986,48.1886926 L739.208186,44.0226869 C739.373427,43.8574461 739.6406,43.8574461 739.805841,44.0226869 L740.501926,44.7187721 C740.667167,44.884013 740.667167,45.1511861 740.501926,45.316427 L735.298813,50.4773453 C735.133572,50.6425861 734.866399,50.6425861 734.701158,50.4773453 Z" id="icon-angle-down"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

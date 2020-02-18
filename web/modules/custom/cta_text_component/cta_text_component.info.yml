@@ -1,5 +1,5 @@
-name: 'Cta text Component'
-description: 'Simple paragraph with four fields '
+name: 'Cta Text component'
+description: 'its simple paragraph with four fields like title,subtitle,image,link for home page '
 type: module
 core: 8.x
 dependencies:

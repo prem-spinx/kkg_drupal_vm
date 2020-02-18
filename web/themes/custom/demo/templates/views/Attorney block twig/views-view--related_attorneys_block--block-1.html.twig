@@ -30,7 +30,7 @@
  * @see template_preprocess_views_view()
  */
 #}
-<div{{ attributes.addClass(classes) }}>
+
   {{ title_prefix }}
   {% if title %}
     {{ title }}
@@ -49,28 +49,25 @@
   {% endif %}
 
   {% if rows %}
-    <section class="practice-sec related-attorney">
+	<section class="practice-sec related-attorney">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8 m-auto sec-title text-center">
-				    {% if header %}
-							{{ header }}
-						{% endif %}
+				{% if header %}
+					{{ header }}
+				{% endif %}
 				</div>
 				<div class="col-lg-12">
 					<div class="row area-list">
 						{{ rows }}
-						<div id="noDataFound" style="display: none; position: static;">
-							<h4>No Attorneys Found</h4>
-						</div>
-				    </div>
-	            </div>
-	        </div>
-	    </div>
+					</div>
+			    </div>
+			</div>
+		</div>
 	</section>
   {% elseif empty %}
     <div class="view-empty">
-      {{ empty }}
+		{{empty}}
     </div>
   {% endif %}
 
@@ -95,4 +92,4 @@
       {{ feed_icons }}
     </div>
   {% endif %}
-</div>
+

@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: cta_component
+label: 'CTA Component'
+effects:
+  94555705-acfc-40f6-bf9b-8f7bef206c87:
+    uuid: 94555705-acfc-40f6-bf9b-8f7bef206c87
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 570
+      height: 400
+      anchor: center-center

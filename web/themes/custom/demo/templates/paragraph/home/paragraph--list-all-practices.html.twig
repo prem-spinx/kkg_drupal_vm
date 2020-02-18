@@ -1,0 +1,14 @@
+
+<section class="hp-practices-sec">
+    <div class="container" {{ attributes }}>
+        <div class="row align-items-center">
+            <div class="col-lg-3 text-center text-sm-left">
+	        <h2>{{ content.field_title.0 }}</h2>
+            <a href="{{ content.field_link_to_all_content.0['#url'] }}" class="btn-link">{{ content.field_link_to_all_content.0['#title'] }}</a>
+            <div id="btnSlide">
+            </div>
+            </div>
+            {{ drupal_view('all_practices', 'block_1') }}
+        </div>
+    </div>
+</section>

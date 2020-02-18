@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * Implements hook_theme.
+ */
+function image_variation_component_theme($existing, $type, $theme, $path) {
+  return [
+    'paragraph__image_block_group' => [
+      'template' => 'paragraph--image-block-group',
+      'base hook' => 'paragraphs',
+    ],
+    'paragraph__content_with_image_block' => [
+      'template' => 'paragraph--content-with-image-block',
+      'base hook' => 'paragraphs',
+    ],
+	'paragraph__part_2' => [
+      'template' => 'paragraph--part-2',
+      'base hook' => 'paragraphs',
+    ],
+  ];
+}

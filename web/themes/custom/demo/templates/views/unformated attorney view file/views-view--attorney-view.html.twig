@@ -45,22 +45,10 @@
     {{ title }}
   {% endif %}
   {{ title_suffix }}
-  
-  {% if exposed %}
-    <div class="view-filters">
-      {{ exposed }}
-    </div>
-  {% endif %}
-  {% if attachment_before %}
-    <div class="attachment attachment-before">
-      {{ attachment_before }}
-    </div>
-  {% endif %}
-
   {% if rows %}
     <div class="view-content row">
 		<section class="related-attor attorneys-sec practice-sec related-attorney">
-			<div class="container">
+			<div class="container" {{ attributes }}>
 				<div class="row">
 					<div class="sec-title text-center">
 						{% if header %}
@@ -69,22 +57,16 @@
 					</div>
 				</div>
 				<div class="row justify-content-end mb-5">
-					<div class="col-md-8 col-lg-5 mx-xl-0 mx-auto">
-						<div class="form-label cmn-select">
-							<select class="cmn-select-box">
-								<option>Filter by Practice Area</option>
-								<option>Bankruptcy, Workouts & Creditor Rights</option>
-								<option>Commercial Lending and Finance</option>
-								<option>Commercial Real Estate – Leasing & Property Management</option>
-								<option>Commercial Real Estate – Sales, Acquisitions, Finance, and Development</option>
-								<option>Corporate & Business Transactions – Contracts</option>
-								<option>Corporate & Business Transactions – Mergers and Acquisitions</option>
-								<option>Litigation & Dispute Resolution</option>
-								<option>Tax, Estate Planning & Probate</option>
-							</select>
-						</div>
+            <div class="col-md-8 col-lg-5 mx-xl-0 mx-auto">
+              <div class="form-label cmn-select">
+                {% if exposed %}
+					<div class="view-filters">
+						{{ exposed }}
 					</div>
-				</div>
+				{% endif %}
+              </div>
+            </div>
+          </div>
 				<div class="row area-list attor-no-slide">
 					{{ rows }}
 						<div id="noDataFound" style="display: none; position: static;">
@@ -97,28 +79,6 @@
   {% elseif empty %}
     <div class="view-empty">
       {{ empty }}
-    </div>
-  {% endif %}
-
-  {% if pager %}
-    {{ pager }}
-  {% endif %}
-  {% if attachment_after %}
-    <div class="attachment attachment-after">
-      {{ attachment_after }}
-    </div>
-  {% endif %}
-  {% if more %}
-    {{ more }}
-  {% endif %}
-  {% if footer %}
-    <div class="view-footer">
-      {{ footer }}
-    </div>
-  {% endif %}
-  {% if feed_icons %}
-    <div class="feed-icons">
-      {{ feed_icons }}
     </div>
   {% endif %}
 </div>
