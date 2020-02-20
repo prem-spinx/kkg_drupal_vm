@@ -52,3 +52,8 @@ function demo_theme_suggestions_block_alter(array &$suggestions, array $variable
     $suggestions[] = 'block__' . $variables['elements']['content']['#block_content']->bundle();
   }
 }
+
+
+
+
+

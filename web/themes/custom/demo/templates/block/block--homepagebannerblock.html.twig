@@ -30,15 +30,15 @@
  */
 #}
 <section class="cmn-banner home-banner">
-        <img class="div-img" src="{{ content.field_home_banner_image.0|render|trim|striptags }}" style="background-image:url({{ content.field_home_banner_image.0|render|trim|striptags }})" alt="">
-        <div class="container" {{ attributes }}>
-          <div class="banner-content row">
+	<img class="div-img" src="{{ content.field_home_banner_image.0|render|trim|striptags }}" style="background-image:url({{ content.field_home_banner_image.0|render|trim|striptags }})" alt="">
+    <div class="container" {{ attributes }}>
+        <div class="banner-content row">
             <div class="col-lg-5 offset-lg-1">
-              <h1>{{ content.field_home_title.0 }}</h1>
-              <p>{{ content.field_sub.0 }}</p>
-			  <a class="btn btn-primary" href="{{ content.field_link.value }}">About The Firm</a>
+				<h1>{{ content.field_home_title.0 }}</h1>
+				<p>{{ content.field_sub.0 }}</p>
+				<a class="btn btn-primary" href="{{ content.field_link.value }}">About The Firm</a>
             </div>
           </div>
-        </div>
+    </div>
 </section>
 

@@ -1,10 +1,7 @@
 (function ($, Drupal, drupalSettings) {
     var type = $('.acmenu').attr('data-typec');
-    if(type){       
-    switch(type) {   
-      case 'page':
-        var menuitem = '.my-firm';
-        break;	
+	if(type){       
+    switch(type) {   	
       case 'practices':
         var menuitem = '.my-practice';
         break;
@@ -20,5 +17,6 @@
       default:
     }
     jQuery(menuitem).addClass("menu-item--active-trail is-active");
-    }
+	}
 })(jQuery, Drupal, drupalSettings);
+$('#edit-list').addClass( 'cmn-select-box' );

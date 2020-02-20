@@ -7994,7 +7994,7 @@ footer {
         .footer-info ul.list-unstyled li a {
           color: #494949;
           font-size: 12px;
-          line-height: 20px;
+          /*line-height: 20px;*/
           font-weight: 500; }
 
 .copyright {

@@ -352,17 +352,17 @@ yx-axis
 	}
 
 	.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
-		background-color: #fff; background-color: rgba(255,255,255,0.75);
+		background-color: #fff; background-color: #79023b;
 		filter: "alpha(opacity=75)"; -ms-filter: "alpha(opacity=75)"; 
 	}
 
 	.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{
-		background-color: #fff; background-color: rgba(255,255,255,0.85);
+		background-color: #79023b; background-color: #79023b;
 		filter: "alpha(opacity=85)"; -ms-filter: "alpha(opacity=85)"; 
 	}
 	.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
 	.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{
-		background-color: #fff; background-color: rgba(255,255,255,0.9);
+		background-color: #79023b; background-color: #79023b;
 		filter: "alpha(opacity=90)"; -ms-filter: "alpha(opacity=90)"; 
 	}
 
@@ -1430,4 +1430,52 @@ section {
   padding: 1px 0px;
   width: 100%; }
   
- 
+ .whats-new .sidebar ul li:before {
+	 content: none;
+ }
+ .whats-new .sidebar ul li {
+	 padding: 0;
+ }
+ form#views-exposed-form-whats-new-page-1 fieldset {
+    width: 100%;
+}
+.toolbar-menu li:before {
+    content: none;
+}
+
+/* footer css chnages 
+
+app.css before change
+.footer-info ul.list-unstyled li a {
+    color: #494949;
+    font-size: 12px;
+    line-height: 20px; 
+    font-weight: 500;
+} 
+*/
+.footer-info ul.list-unstyled li:first-child {
+    padding-top: 0px;
+}
+.footer-info ul.list-unstyled li {
+    margin: 0 !important;
+    padding: 0px 0;
+}
+.footer-info ul.list-unstyled {
+    padding: 0 0 0 0px;
+}
+/* whats new change */
+.form-group {
+    margin-bottom: 0px;
+}
+
+
+/* active link */
+header .navbar.navbar-expand-lg .main-navigation .menu-main-menu-container > ul > li.menu-item--active-trail:after {
+    opacity: 1 !important;
+    width: auto !important;
+}
+header .navbar.navbar-expand-lg .main-navigation .menu-main-menu-container > ul > li a.mega-menu.is-active:before {
+    opacity: 1 !important;
+    width: auto !important;
+}	
+
