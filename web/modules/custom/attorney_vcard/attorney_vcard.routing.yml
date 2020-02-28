@@ -1,0 +1,7 @@
+attorney_vcard.vcard:
+  path: '/vcard/{node}'
+  defaults:
+    _title: 'Vcard details'
+    _controller: '\Drupal\attorney_vcard\Controller\VcardController::vcardFetch'
+  requirements:
+    _permission: 'access content'

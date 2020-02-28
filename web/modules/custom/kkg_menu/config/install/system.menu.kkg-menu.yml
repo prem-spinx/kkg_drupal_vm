@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: kkg-menu
+label: kkg_menu
+description: 'Main Menu Of KKG'
+locked: false

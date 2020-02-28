@@ -1474,8 +1474,8 @@ header .navbar.navbar-expand-lg .main-navigation .menu-main-menu-container > ul 
     opacity: 1 !important;
     width: auto !important;
 }
-header .navbar.navbar-expand-lg .main-navigation .menu-main-menu-container > ul > li a.mega-menu.is-active:before {
-    opacity: 1 !important;
-    width: auto !important;
-}	
 
+
+.sub-menu .menu-item--active-trail a {
+    color: #79023b !important;
+}
