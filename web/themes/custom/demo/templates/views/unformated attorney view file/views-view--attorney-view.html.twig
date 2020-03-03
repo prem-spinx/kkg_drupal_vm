@@ -30,59 +30,37 @@
  * @see template_preprocess_views_view()
  */
 #}
-{%
-  set classes = [
-    'view',
-    'view-' ~ id|clean_class,
-    'view-id-' ~ id,
-    'view-display-id-' ~ display_id,
-    dom_id ? 'js-view-dom-id-' ~ dom_id,
-  ]
-%}
-<div{{ attributes.addClass(classes) }}>
-  {{ title_prefix }}
-  {% if title %}
-    {{ title }}
-  {% endif %}
-  {{ title_suffix }}
-  {% if rows %}
-    <div class="view-content row">
-		<section class="related-attor attorneys-sec practice-sec related-attorney">
-			<div class="container" {{ attributes }}>
-				<div class="row">
-					<div class="sec-title text-center">
-						{% if header %}
-							{{ header }}
-						{% endif %}
-					</div>
+<section class="related-attor attorneys-sec practice-sec related-attorney">
+		<div class="container" {{ attributes }}>
+			<div class="row">
+				<div class="sec-title text-center">
+					{% if header %}
+						{{ header }}
+					{% endif %}
 				</div>
-				<div class="row justify-content-end mb-5">
-            <div class="col-md-8 col-lg-5 mx-xl-0 mx-auto">
-              <div class="form-label cmn-select">
-                {% if exposed %}
-					<div class="view-filters">
-						{{ exposed }}
-					</div>
-				{% endif %}
-              </div>
             </div>
-          </div>
-				<div class="row area-list attor-no-slide">
-					{{ rows }}
-						<div id="noDataFound" style="display: none; position: static;">
-							<h4>No Attorneys Found</h4>
-						</div>
+			<div class="row justify-content-end mb-5">
+				<div class="col-md-8 col-lg-5 mx-xl-0 mx-auto">
+					<div class="form-label cmn-select">
+						{% if exposed %}
+							<div class="view-filters">
+								{{ exposed }}
+							</div>
+						{% endif %}
+                    </div>
 				</div>
+            </div>
+		    {% if rows %}
+			<div class="row area-list attor-no-slide">
+				{{ rows }}
+				{% elseif empty %}
+					<div class="view-empty">
+						{{ empty }}
+					</div>
+			{% endif %}
 			</div>
-		</section>
-    </div>
-  {% elseif empty %}
-    <div class="view-empty">
-      {{ empty }}
-    </div>
-  {% endif %}
-</div>
+		</div>
+</section>
 
-      
       
     

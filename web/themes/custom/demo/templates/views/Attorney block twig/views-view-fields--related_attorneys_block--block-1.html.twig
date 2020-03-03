@@ -40,7 +40,8 @@
 		<span class="area-content">
 		    <span class="h4">{{ fields.field_related_attorneys.content }}</span>
 			<span class="h5">{{ fields.field_designation.content }}</span>
-			<p>{{ fields.field_biography.content }}</p>
+			{% set bio = fields.field_biography.content|striptags|trim|render|slice(9,95) %}
+			<p>{{ bio }}</p>
 			<span class="arrow-link">{{ fields.view_node.content|striptags|trim|render }}</span>
 		</span>
 	</a>

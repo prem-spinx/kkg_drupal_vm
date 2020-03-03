@@ -1,0 +1,6 @@
+name: Application form
+description: Simple  custom Application form.
+core: 8.x
+package: Custom
+type: module
+

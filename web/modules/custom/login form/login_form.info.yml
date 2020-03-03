@@ -1,0 +1,5 @@
+name: custom login  form
+description: Simple  custom login  form.
+core: 8.x
+package: Custom
+type: module

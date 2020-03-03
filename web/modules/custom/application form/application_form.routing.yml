@@ -1,0 +1,7 @@
+application_from.form:
+  path: '/application_form/myform'
+  defaults:
+    _title: 'Application form'
+    _form: '\Drupal\application_form\Form\ResumeForm'
+  requirements:
+    _permission: 'access content'
