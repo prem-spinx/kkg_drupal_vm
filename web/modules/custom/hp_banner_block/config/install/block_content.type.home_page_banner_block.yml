@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: home_page_banner_block
+label: 'Home Page Banner Block'
+revision: 0
+description: 'home page banner block fro front page '

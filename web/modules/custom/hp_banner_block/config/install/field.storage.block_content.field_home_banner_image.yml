@@ -3,14 +3,24 @@ status: true
 dependencies:
   module:
     - block_content
-    - media
+    - file
+    - image
 id: block_content.field_home_banner_image
 field_name: field_home_banner_image
 entity_type: block_content
-type: entity_reference
+type: image
 settings:
-  target_type: media
-module: core
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
 locked: false
 cardinality: 1
 translatable: true

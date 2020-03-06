@@ -1468,7 +1468,6 @@ app.css before change
     margin-bottom: 0px;
 }
 
-
 /* active link */
 header .navbar.navbar-expand-lg .main-navigation .menu-main-menu-container > ul > li.menu-item--active-trail:after {
     opacity: 1 !important;

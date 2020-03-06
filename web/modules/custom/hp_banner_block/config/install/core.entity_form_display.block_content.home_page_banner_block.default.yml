@@ -7,9 +7,10 @@ dependencies:
     - field.field.block_content.home_page_banner_block.field_home_title
     - field.field.block_content.home_page_banner_block.field_link
     - field.field.block_content.home_page_banner_block.field_sub
+    - image.style.thumbnail
   module:
+    - image
     - link
-    - media_library
     - text
 id: block_content.home_page_banner_block.default
 targetEntityType: block_content
@@ -17,11 +18,12 @@ bundle: home_page_banner_block
 mode: default
 content:
   field_home_banner_image:
-    type: media_library_widget
     weight: 29
     settings:
-      media_types: {  }
+      progress_indicator: throbber
+      preview_image_style: thumbnail
     third_party_settings: {  }
+    type: image_image
     region: content
   field_home_title:
     weight: 26

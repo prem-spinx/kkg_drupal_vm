@@ -7,7 +7,9 @@ dependencies:
     - field.field.block_content.home_page_banner_block.field_home_title
     - field.field.block_content.home_page_banner_block.field_link
     - field.field.block_content.home_page_banner_block.field_sub
+    - image.style.banner
   module:
+    - image
     - link
     - text
 id: block_content.home_page_banner_block.default
@@ -16,13 +18,12 @@ bundle: home_page_banner_block
 mode: default
 content:
   field_home_banner_image:
-    type: entity_reference_entity_view
     weight: 3
     label: hidden
     settings:
-      view_mode: only_url_image
-      link: false
+      image_style: banner
     third_party_settings: {  }
+    type: image_url
     region: content
   field_home_title:
     weight: 0

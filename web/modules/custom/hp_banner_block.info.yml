@@ -1,0 +1,5 @@
+name: 'Home page Banner Block'
+description: 'its banner block for home page and front page with three field .'
+type: module
+core: 8.x
+version: 8.x-1.0
