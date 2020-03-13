@@ -1,0 +1,10 @@
+name: 'Attorney contact page'
+description: 'attorney contact page pargaraph without field but inside twig coll both view and webform'
+type: module
+core: 8.x
+dependencies:
+  - block
+  - paragraphs
+  - system
+  - views
+version: 8.x-1.0

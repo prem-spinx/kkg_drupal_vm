@@ -1,0 +1,4 @@
+excluded:
+  - block.block.views_block__industries_block_block_1
+  - block.block.firmfootermenu
+required: true

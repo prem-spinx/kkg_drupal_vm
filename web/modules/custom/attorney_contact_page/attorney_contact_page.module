@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * Implements hook_theme.
+ */
+function attorney_contact_page_theme($existing, $type, $theme, $path) {
+  return [
+    'paragraph__contact_page_' => [
+      'template' => 'paragraph--contact-page-',
+      'base hook' => 'paragraphs',
+    ],
+  ];
+}

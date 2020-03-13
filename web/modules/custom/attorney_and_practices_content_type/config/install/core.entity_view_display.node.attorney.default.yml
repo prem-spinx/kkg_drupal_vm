@@ -1,0 +1,163 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.attorney.field_admitted_to_practice
+    - field.field.node.attorney.field_attorney_fb_link
+    - field.field.node.attorney.field_attorney_linkedin_link
+    - field.field.node.attorney.field_attorney_tw_link
+    - field.field.node.attorney.field_bar_admissions
+    - field.field.node.attorney.field_biography
+    - field.field.node.attorney.field_designation
+    - field.field.node.attorney.field_education
+    - field.field.node.attorney.field_email_id
+    - field.field.node.attorney.field_fax
+    - field.field.node.attorney.field_image_a
+    - field.field.node.attorney.field_memberships
+    - field.field.node.attorney.field_phon_
+    - field.field.node.attorney.field_publications
+    - field.field.node.attorney.field_related_practices
+    - field.field.node.attorney.field_representative_cases
+    - field.field.node.attorney.field_speaking_experiences
+    - node.type.attorney
+  module:
+    - text
+    - user
+id: node.attorney.default
+targetEntityType: node
+bundle: attorney
+mode: default
+content:
+  field_admitted_to_practice:
+    weight: 13
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_attorney_fb_link:
+    weight: 7
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_attorney_linkedin_link:
+    weight: 9
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_attorney_tw_link:
+    weight: 8
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_bar_admissions:
+    weight: 6
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_biography:
+    weight: 11
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_designation:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_education:
+    weight: 5
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_email_id:
+    weight: 4
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_fax:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_image_a:
+    type: entity_reference_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_memberships:
+    weight: 12
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_phon_:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_publications:
+    weight: 14
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_related_practices:
+    weight: 10
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_representative_cases:
+    weight: 15
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_speaking_experiences:
+    weight: 16
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  addtoany: true
+  links: true

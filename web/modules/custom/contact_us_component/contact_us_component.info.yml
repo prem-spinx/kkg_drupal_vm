@@ -1,0 +1,15 @@
+name: 'Contact Us Component'
+description: 'simple paragraph with google map field and simple fields'
+type: module
+core: 8.x
+dependencies:
+  - block
+  - field
+  - google_map_field
+  - link
+  - paragraphs
+  - system
+  - text
+  - views
+version: ' 8.x-1.0'
+core_incompatible: false

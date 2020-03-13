@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: banner_block_
+label: 'Banner block '
+revision: 0
+description: 'nodes banner for same banner for all nodes'

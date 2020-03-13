@@ -53,6 +53,18 @@ function demo_theme_suggestions_block_alter(array &$suggestions, array $variable
   }
 }
 
+function kkgpc_theme_suggestions_page_alter(&$suggestions, $variables) {
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if ($node instanceof \Drupal\node\NodeInterface) {	
+	$nid =$node->id();	
+	$alias = \Drupal::service('path.alias_manager')->getAliasByPath('/node/'.$nid); 
+    $alias = explode("/",$alias)[1];
+	$suggestions[] = 'page__alias__' . $alias;
+	$suggestions[] = 'page__' . $node->bundle();
+    $suggestions[] = 'page__node_' . $node->bundle();
+  }
+}
+
 
 
 

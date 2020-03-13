@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies: {  }
+id: attorney_to_practices
+label: 'Attorney to practices'
+enabled: true
+first_field: field_related_practices
+second_field: field_related_attorneys
+bundles:
+  node:
+    - '*'
+    - attorney
+    - practices

@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * Implements hook_theme.
+ */
+function home_page_banner_paragraph_type_theme($existing, $type, $theme, $path) {
+  return [
+    'paragraph__home_banner' => [
+      'template' => 'paragraph--home-banner',
+      'base hook' => 'paragraphs',
+    ],
+  ];
+}

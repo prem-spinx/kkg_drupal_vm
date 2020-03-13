@@ -1,0 +1,51 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.contact_us.field_address
+    - field.field.paragraph.contact_us.field_contact_numbers
+    - field.field.paragraph.contact_us.field_email
+    - field.field.paragraph.contact_us.field_location
+    - paragraphs.paragraphs_type.contact_us
+  module:
+    - google_map_field
+    - link
+    - text
+id: paragraph.contact_us.default
+targetEntityType: paragraph
+bundle: contact_us
+mode: default
+content:
+  field_address:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_contact_numbers:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_email:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_location:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: google_map_field_default
+    region: content
+hidden:
+  created: true
+  status: true

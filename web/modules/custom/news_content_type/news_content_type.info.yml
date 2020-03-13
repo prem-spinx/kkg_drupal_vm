@@ -1,0 +1,19 @@
+name: 'news content type'
+description: 'News Content type with view '
+type: module
+core: 8.x
+dependencies:
+  - better_exposed_filters
+  - datetime
+  - field
+  - media
+  - media_library
+  - menu_ui
+  - node
+  - path
+  - taxonomy
+  - text
+  - user
+  - views
+version: 8.x-1.0
+core_incompatible: false

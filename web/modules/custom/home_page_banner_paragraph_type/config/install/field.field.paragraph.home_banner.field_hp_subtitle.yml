@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_hp_subtitle
+    - paragraphs.paragraphs_type.home_banner
+  module:
+    - text
+id: paragraph.home_banner.field_hp_subtitle
+field_name: field_hp_subtitle
+entity_type: paragraph
+bundle: home_banner
+label: Subtitle
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

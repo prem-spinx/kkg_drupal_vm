@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_speaking_experiences
+    - node.type.attorney
+  module:
+    - text
+id: node.attorney.field_speaking_experiences
+field_name: field_speaking_experiences
+entity_type: node
+bundle: attorney
+label: 'Speaking Experiences'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

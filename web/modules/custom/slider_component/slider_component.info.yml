@@ -1,0 +1,13 @@
+name: 'Slider component'
+description: 'list all practices using slider '
+type: module
+core: 8.x
+dependencies:
+  - block
+  - field
+  - link
+  - paragraphs
+  - system
+  - views
+version: 8.x-1.0
+core_incompatible: false

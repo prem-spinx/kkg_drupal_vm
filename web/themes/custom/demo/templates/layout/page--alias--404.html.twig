@@ -1,0 +1,115 @@
+<div class="page-wrapper">
+  <header class="fixed-top">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <!-- Logo -->
+        {{ page.header }}
+        {% if page.primary_menu or page.header_form %}
+          <button class="navbar-toggler d-lg-none" type="button"
+                  data-toggle="collapse" data-target="#divNavbar"
+                  aria-controls="divNavbar" aria-expanded="false"
+                  aria-label="Toggle navigation"><span
+              class="navbar-toggler-icon">Menu</span></button>
+          <!-- Navigation -->
+          <div id="divNavbar"
+               class="main-navigation navigation navbar-collapse collapse"
+               role="navigation" aria-label="Main menu">
+            <div class="menu-main-menu-container">
+              {{ page.primary_menu }}
+              {% if page.header_form %}
+                <div class="form-inline navbar-form float-right">
+                  {{ page.header_form }}
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="no-page">
+      <img class="div-img" src="{{ base_url }}/{{ directory }}/img/0.gif"
+           style="background-image:url({{ base_url }}/{{ directory }}/img/no-page-bg.png);"
+           alt="404 Page Banner">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-6 col-lg-8 offset-lg-1">
+            <h1>404 Error:<br>Page Not Found</h1>
+            <p>It looks like this page does not exist. Sorry about that! We
+              recommend using the navigation or search to find your way.</p><a
+              href="{{ base_url }}/who-we-are/" class="btn btn-secondary">About
+              the Firm</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-info">
+      <img src="{{ base_url }}/{{ directory }}/img/0.gif" class="div-img"
+           style="background-image:url( {{ base_path ~ directory }}/img/footer-bg.jpg);"
+           alt="Footer Logo">
+      <div class="{{ container }}">
+        <div class="row">
+          <div class="col-sm-6 col-md-6  col-lg-3">
+
+            <a href="{{ base_url }}" class="footer-logo">
+              <img src="{{ base_url }}/{{ directory }}/img/footer-logo.png"
+                   width="63" height="64" alt="footer-logo">
+            </a>
+
+            {% block footer_first %}
+              {% if page.footer_first %}
+                {{ page.footer_first }}
+              {% endif %}
+            {% endblock %}
+          </div>
+          <div class="col-sm-6 col-md-6  col-lg-3">
+
+            {% block footer_2 %}
+              {% if page.footer_2 %}
+                {{ page.footer_2 }}
+              {% endif %}
+            {% endblock %}
+          </div>
+          <div class="col-sm-6 col-md-6  col-lg-3">
+
+            {% block footer_3 %}
+              {% if page.footer_3 %}
+                {{ page.footer_3 }}
+              {% endif %}
+            {% endblock %}
+          </div>
+          <div class="col-sm-6 col-md-6  col-lg-3">
+
+            {% block footer_4 %}
+              {% if page.footer_4 %}
+                {{ page.footer_4 }}
+              {% endif %}
+            {% endblock %}
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    {% block footer %}
+      <div class="copyright">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 copy-txt">
+
+              {% if page.footer %}
+                {{ page.footer }}
+              {% endif %}
+            </div>
+            <div class="col-md-6 text-center text-md-right pt-2 pt-md-0">
+              <a href="https://www.spinxdigital.com/" rel="noopener"
+                 target="_blank">Design by SPINX Digital</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endblock %}
+  </footer>
+</div>

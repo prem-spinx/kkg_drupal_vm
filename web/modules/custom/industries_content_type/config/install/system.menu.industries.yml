@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: industries
+label: 'Industries Footer Menu'
+description: 'Industries Menu links'
+locked: false

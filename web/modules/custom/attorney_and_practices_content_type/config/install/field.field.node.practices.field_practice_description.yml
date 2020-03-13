@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_practice_description
+    - node.type.practices
+  module:
+    - text
+id: node.practices.field_practice_description
+field_name: field_practice_description
+entity_type: node
+bundle: practices
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

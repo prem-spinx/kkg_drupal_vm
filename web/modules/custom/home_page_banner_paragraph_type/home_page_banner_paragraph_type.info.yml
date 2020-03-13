@@ -1,0 +1,16 @@
+name: 'Home Page Banner P'
+description: 'its home page banner using paragraph type '
+type: module
+core: 8.x
+dependencies:
+  - block
+  - field
+  - link
+  - media
+  - media_library
+  - paragraphs
+  - system
+  - text
+  - views
+version: 8.x-1.0
+core_incompatible: false

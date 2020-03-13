@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: latest_news_component
+label: 'Latest news component'
+icon_uuid: null
+description: 'it contain latest news view block and giv referance to front page content type'
+behavior_plugins: {  }

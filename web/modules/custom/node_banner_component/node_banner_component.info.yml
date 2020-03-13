@@ -1,0 +1,11 @@
+name: 'Node Banner component '
+description: 'simple node banner component for all nodes banner to add bu user'
+type: module
+core: 8.x
+dependencies:
+  - field
+  - media
+  - media_library
+  - paragraphs
+  - text
+version: 8.x-1.0

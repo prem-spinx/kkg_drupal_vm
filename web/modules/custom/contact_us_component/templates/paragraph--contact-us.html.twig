@@ -1,0 +1,23 @@
+<section class="p-0">
+  {{ content.field_location }}
+</section>
+<section class="contact-info">
+        <div class="container" {{ attributes }}>
+          <div class="row">
+            <div class="col-md-4">
+              <h4>Our New Address</h4>
+			  {{ content.field_address.0|raw }}
+            </div>
+            <div class="col-md-4">
+              <h4>Contact Numbers</h4>
+              {{ content.field_contact_numbers.0|raw }}
+            </div>
+            <div class="col-md-4">
+              <h4>Email</h4>
+              <a href="{{ content.field_email.0['#url'] }}" class="btn btn-primary">{{ content.field_email.0['#title'] }}</a>
+            </div>
+          </div>
+        </div>
+</section>
+{{ drupal_view('attorneys_contacts_us', 'block_1') }}
+

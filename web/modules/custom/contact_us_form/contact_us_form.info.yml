@@ -1,0 +1,12 @@
+name: 'Contact Us Form'
+description: 'simple webform with fields and its configratiuon'
+type: module
+core: 8.x
+dependencies:
+  - block
+  - system
+  - views
+  - webform
+  - webform_contact
+version: 8.x-1.0
+core_incompatible: false

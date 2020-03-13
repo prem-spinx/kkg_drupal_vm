@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: practices
+label: 'Practices Footer Menu'
+description: 'Practices Menu Links'
+locked: false

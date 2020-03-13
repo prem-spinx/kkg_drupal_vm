@@ -1,0 +1,12 @@
+name: 'Nodes Banner Block'
+description: 'for same banner its simple banner block . '
+type: module
+core: 8.x
+dependencies:
+  - block_content
+  - field
+  - media
+  - media_library
+  - text
+version: 8.x-1.0
+core_incompatible: false

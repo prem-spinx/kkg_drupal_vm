@@ -1,0 +1,10 @@
+name: 'Firm Footer menu'
+description: 'Footer Menu for Firms '
+type: module
+core: 8.x
+dependencies:
+  - block
+  - system
+  - views
+version: 8.x-1.0
+core_incompatible: false

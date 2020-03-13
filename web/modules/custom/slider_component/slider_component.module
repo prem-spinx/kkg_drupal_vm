@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * Implements hook_theme.
+ */
+function slider_component_theme($existing, $type, $theme, $path) {
+  return [
+    'paragraph__list_all_practices' => [
+      'template' => 'paragraph--list-all-practices',
+      'base hook' => 'paragraphs',
+    ],
+  ];
+}

@@ -1,0 +1,25 @@
+name: 'Attorney And Practices Content type'
+description: 'Attorneys and practices content type with fields  and  related to each other by one field '
+type: module
+core: 8.x
+dependencies:
+  - addtoany
+  - better_exposed_filters
+  - block
+  - cer
+  - entity_reference_exposed_filters
+  - entity_reference_revisions
+  - field
+  - media
+  - media_library
+  - menu_ui
+  - node
+  - paragraphs
+  - path
+  - pathauto
+  - system
+  - text
+  - user
+  - views
+version: 8.x-1.0
+core_incompatible: false

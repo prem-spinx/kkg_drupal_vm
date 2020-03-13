@@ -1,0 +1,12 @@
+<section class="cmn-banner home-banner">
+        <img class="div-img " src="{{ file_url(content.field_hp_image[0]['#media'].field_media_image.entity.uri.value) }}" style="background-image:url({{ file_url(content.field_hp_image[0]['#media'].field_media_image.entity.uri.value) }});" alt="practice-areas-banner">
+        <div class="container" {{ attributes }}>
+          <div class="banner-content row">
+            <div class="col-lg-5 offset-lg-1">
+              <h1>{{ content.field_hp_title.0 }}</h1>
+              <p>{{ content.field_hp_subtitle.0 }}</p>
+			  <a class="btn btn-primary" href="{{ content.field_hp_link.uri }}">About The Firm</a>
+            </div>
+          </div>
+        </div>
+</section>

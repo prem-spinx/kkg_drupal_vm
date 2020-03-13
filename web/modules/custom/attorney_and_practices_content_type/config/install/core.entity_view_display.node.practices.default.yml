@@ -1,0 +1,63 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.practices.field_icon
+    - field.field.node.practices.field_practice_description
+    - field.field.node.practices.field_practice_listing_image
+    - field.field.node.practices.field_practice_subtitle
+    - field.field.node.practices.field_related_attorneys
+    - node.type.practices
+  module:
+    - text
+    - user
+id: node.practices.default
+targetEntityType: node
+bundle: practices
+mode: default
+content:
+  field_icon:
+    type: entity_reference_entity_view
+    weight: 5
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_practice_description:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_practice_listing_image:
+    type: entity_reference_entity_view
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: only_url_image
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_practice_subtitle:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_related_attorneys:
+    weight: 4
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden:
+  addtoany: true
+  links: true

@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: banner_component
+label: 'Banner Component'
+icon_uuid: null
+description: 'Banner module for all content type pages with three fields.'
+behavior_plugins: {  }

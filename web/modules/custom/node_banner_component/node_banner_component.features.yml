@@ -1,0 +1,5 @@
+excluded:
+  - block.block.views_block__industries_block_block_1
+  - core.entity_form_display.node.page.default
+  - core.entity_view_display.node.page.default
+required: true

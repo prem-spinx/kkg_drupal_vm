@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: list_all_practices
+label: 'List All Practices'
+icon_uuid: null
+description: 'it contain all practices block view '
+behavior_plugins: {  }
