@@ -50,7 +50,7 @@
 	<!-- footer section -->
 		<div class="footer-info">
 			<img src="{{ base_url }}/{{ directory }}/img/0.gif" class="div-img"
-				style="background-image:url( {{ base_path ~ directory }}/img/footer-bg.jpg);height:663px;width:1423px;"
+				style="background-image:url( {{ base_path ~ directory }}/img/footer-bg.jpg);"
 				alt="Footer Logo">
 				
 				<div class="{{ container }}">
@@ -93,32 +93,10 @@
 				</div>
 		</div>
 		{% block footer_fifth %}
-			<div class="copyright">
-				<div class="container" {{ attributes }}>
-					<div class="row">
-						<div class="col-md-6 copy-txt">
-							© {{ 'now'|date('Y') }} Kitchens Kelley Gaynes, P.C.&nbsp; | &nbsp;<a href="{{ base_url }}/privacy-policy">Privacy Policy</a>&nbsp; | &nbsp;<a href="{{ base_url }}/terms-use">Terms of Use</a>&nbsp; | &nbsp;<a href="{{ base_url }}/disclaimer">Disclaimer </a>
-						</div>
-						<div class="col-md-6 text-center text-md-right pt-2 pt-md-0">
-							<a href="https://www.spinxdigital.com/" rel="noopener"
-							target="_blank">Design by SPINX Digital</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		
+			{% if page.footer_fourth %}
+				{{ page.footer_fifth }}
+			{% endif %}
 		{% endblock %}
 	</footer>
 	<!-- footer section end here -->
 </div>
-<script>
-// Get the modal
-var modal = document.getElementById('id01');
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-</script>
