@@ -9,7 +9,9 @@
  
 			{% set bio = fields.field_biography.content|striptags|trim|render|slice(9, 65) %}
 			<p>{{ bio }}.{{"..."}}</p>
-			 <span class="arrow-link">{{ fields.view_node.content|striptags|trim|render }}</span>
+			 <span class="arrow-link">{{ fields.view_node.content|striptags|trim|render }}
+			 </span>	
+			 
         </span>
 	</a>
 </div>

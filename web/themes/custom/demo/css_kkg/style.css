@@ -1478,4 +1478,37 @@ header .navbar.navbar-expand-lg .main-navigation .menu-main-menu-container > ul 
 .sub-menu .menu-item--active-trail a {
     color: #79023b !important;
 }
+/* at filltr*/
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    margin: auto;
+    top: 0px;
+    right: 0px;
+    background: #79023b url(../img/down-shape.png) no-repeat center center;
+    height: 100%;
+    width: 50px;
+}
 
+.select2-container--default .select2-selection--single {
+    border-radius: 0;
+    font-family: "Martel", serif;
+    outline: none;
+    padding: 4px 50px 4px 30px;
+    height: auto;
+    color: #79023b;
+    font-size: 16px;
+    line-height: 24px;
+    border: 1px solid #79023b;
+    background: #ffffff;
+    min-height: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.select2-container .select2-selection--single .select2-selection__rendered {
+    padding: 0;
+    outline: none;
+    color: #79023b;
+    font-family: "Martel", serif;
+    font-size: 16px;
+    line-height: 40px;
+}

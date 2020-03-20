@@ -1,5 +1,5 @@
 name: Attorney Vcard 
-description: This module provides custom functionality to HBB Law for Vcard download.
+description: This module provides custom functionality to kkgpc for Vcard download.
 package: Custom
 type: module
 core: '8.x'

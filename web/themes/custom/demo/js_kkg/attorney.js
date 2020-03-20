@@ -19,4 +19,4 @@
     jQuery(menuitem).addClass("menu-item--active-trail is-active");
 	}
 })(jQuery, Drupal, drupalSettings);
-$('#edit-list').addClass( 'cmn-select-box' );
+$('#edit-pid').addClass( 'cmn-select-box' );

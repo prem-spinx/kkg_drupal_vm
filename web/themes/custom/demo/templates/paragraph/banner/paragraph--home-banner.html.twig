@@ -5,7 +5,7 @@
             <div class="col-lg-5 offset-lg-1">
               <h1>{{ content.field_hp_title.0 }}</h1>
               <p>{{ content.field_hp_subtitle.0 }}</p>
-			  <a class="btn btn-primary" href="{{ content.field_hp_link.uri }}">About The Firm</a>
+			  <a class="btn btn-primary" href="{{ content.field_hp_link[0]['#url'] }}">{{ content.field_hp_link[0]['#title'] }}</a>
             </div>
           </div>
         </div>

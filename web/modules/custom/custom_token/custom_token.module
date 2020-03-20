@@ -1,0 +1,46 @@
+<?php
+
+use Drupal\Core\Render\BubbleableMetadata;
+
+/*
+* implement hook_token_info()
+*/
+
+function custom_token_token_info() {
+  $types['custom_token_type'] = [
+    'name' => t('Date'),
+    'description' => t('Date'),
+  ];
+  $tokens['custom_token_name'] = [
+    'name' => t('Date'),
+    'description' => t('Date'),
+  ];
+
+  return [
+    'types' => $types,
+    'tokens' => [
+      'custom_token_type' => $tokens,
+    ],
+  ];
+}
+
+/*
+* implement hook_tokens()
+*/
+
+function custom_token_tokens($type, $tokens, array $data, array $options, BubbleableMetadata $bubbleable_metadata) {
+  if ($type == 'custom_token_type') {
+    foreach ($tokens as $name => $original) {
+      switch ($name) {
+        case 'custom_token_name':
+          $text = date(Y);
+          $replacements[$original] = $text;
+          break;
+      }
+    }
+  }
+  return $replacements;
+}
+
+
+?>

@@ -11,8 +11,6 @@ use Drupal\media\Entity\Media;
 use Drupal\file\Entity\File;
 
 
-
-
 /**
  * Controller routines for AJAX routes.
  */
@@ -21,20 +19,24 @@ class VcardController extends ControllerBase {
   public function vcardFetch(NodeInterface $node) {
 
     if($node){
+		//name
         $name = $node->get('title')->getValue();
-        $email = $node->get('field_email_id')->getValue();
+		//email
+        $email = $node->get('field_email_id')->getString();
         $image_file_id = $node->get('field_image_a')->getValue();
-        //$telephone = $node->get('field_telephone')->getValue();
-        $nid = $node->get('nid')->getValue();
-        $filename = $nid[0]['value'].".vcf";
-        //$social = $node->get('field_linkedin_link')->getString();
-        $designation = $node->get('field_designation')->getvalue();
-        
-        // Trim Social field
-        //$social_link=trim($social);
-        //$social_arr = explode (",", $social_link);  
+		//phon no
+        $telephone = $node->get('field_phon_')->getString();
 
-        // Get designation from tid
+		//fax 
+		$fax = $node->get('field_fax')->getString();
+		// file name
+        //$nid = $node->get('nid')->getValue();
+        $filename = $name[0]['value'].".vcf";
+
+
+        $designation = $node->get('field_designation')->getString();
+		echo $designation;
+        
 
         // Get Image url
         $media = Media::load($image_file_id[0]['target_id']);
@@ -43,26 +45,29 @@ class VcardController extends ControllerBase {
           $file = File::load($fid);
           $image_url = $file->url();
         }
-		//dump($lname[0]['value']);
-		//exit;
+		// data print in vacrd format
 		$fullname = $name[0]['value'];
         $data=null;
         $data.="BEGIN:VCARD\n";
+		
         $data.="VERSION:3.0\n";
+		
 		$data.="FN:".$fullname."\n";
-        $data.="ORG:" ."Haight Brown Bonesteel". "\n";
-        $data.="TITLE:".$designation."\n";    
-        // $data.="TEL;WORK:".$telephone."\n";    
-        $data.="EMAIL;TYPE=work:" .$email[0]['value']."\n";
-        $data.="PHOTO;JPEG;ENCODING=BASE64:".base64_encode(file_get_contents($image_url))."\n";    
-        //$data.="URL;type=pref:https://www.linkedin.com/".$social_arr[1]."\n";
+		
+        $data.="TITLE:".$designation."\n";  
+		$data.="EMAIL;type=INTERNET;type=WORK;type=pref:"  .$email."\n";
+		$data.="TEL;TYPE=WORK:".$telephone."\n";
+		
+		$data.="TEL;TYPE=WORK;TYPE=FAX:".$fax."\n";	
+		//Image print
+        $data.="PHOTO;JPEG;ENCODING=BASE64:".base64_encode(file_get_contents($image_url))."\n";
         $data.="END:VCARD";
 
         $path = base_path();
-        //$fullpath =  $_SERVER['DOCUMENT_ROOT'].''.base_path();
-        $fullpath = "C:\xammp\htdocs\drupal-project\drupal-vm\drupal\web";
-		$filePath = $fullpath."/sites/default/files/vcard/".$filename;
-        $redirection_path = base_path().'/sites/default/files/vcard/'.$filename;
+        $fullpath =  $_SERVER['DOCUMENT_ROOT'].''.base_path();
+		//$fullpath = \Drupal::request()->getSchemeAndHttpHost();
+		$filePath = $fullpath."sites/default/files/vcard/".$filename;
+        $redirection_path = base_path().'sites/default/files/vcard/'.$filename;
 		$file = fopen($filePath,"w");
         fwrite($file,$data);
         fclose($file);   
